@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronRight, Code, Lightbulb, BarChart3, Clock, Zap, ArrowRight } from 'lucide-react';
-import './App.css'; // Vamos criar este arquivo depois
+import './App.css'; 
+import UpdateNotification from './components/UpdateNotification';
+import InstallPWA from './components/InstallPWA';
+
+
 
 const CasesApp = () => {
   const [selectedCase, setSelectedCase] = useState(null);
@@ -350,13 +354,17 @@ const CasesApp = () => {
 
   return (
     <div className="app-container">
+      <UpdateNotification />
       <header className="app-header">
         <h1 className="app-title">Cases de Co-criação com LLMs</h1>
         <p className="app-subtitle">Uma biblioteca de experiências práticas apresentadas no Agile Trends 2025</p>
       </header>
       
       {selectedCase ? renderCaseDetail() : renderCaseList()}
+      
+      <InstallPWA />
     </div>
+    
   );
 };
 

@@ -520,3 +520,37 @@ body {
     padding-bottom: 0.5rem;
   }
 }
+
+/* Estilos para o botão de instalação PWA */
+.install-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.install-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.install-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.install-icon {
+  width: 20px;
+  height: 20px;
+}
