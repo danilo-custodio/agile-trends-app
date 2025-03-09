@@ -1,66 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { RefreshCw } from 'lucide-react';
+import React, { useState } from 'react';
+import { RefreshCw, X } from 'lucide-react';
+import '../styles/UpdateNotification.css';
 
-const UpdateNotification = () => {
-  const [showUpdateBar, setShowUpdateBar] = useState(false);
+const UpdateNotification = ({ onUpdate }) => {
+  const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    // Registra um listener para atualização do service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        setShowUpdateBar(true);
-      });
-    }
-  }, []);
-
-  const handleUpdate = () => {
-    window.location.reload();
+  const handleClose = () => {
+    setVisible(false);
   };
 
-  if (!showUpdateBar) {
-    return null;
-  }
+  const handleUpdate = () => {
+    if (onUpdate) {
+      onUpdate();
+    }
+    setVisible(false);
+  };
+
+  if (!visible) return null;
 
   return (
     <div className="update-notification">
-      <p>Nova versão disponível!</p>
-      <button className="update-button" onClick={handleUpdate}>
-        <RefreshCw className="update-icon" /> Atualizar agora
-      </button>
-      <style jsx="true">{`
-        .update-notification {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          background-color: #3b82f6;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          gap: 20px;
-          z-index: 1001;
-        }
-        
-        .update-button {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          background-color: white;
-          color: #3b82f6;
-          border: none;
-          border-radius: 4px;
-          padding: 5px 10px;
-          font-weight: bold;
-          cursor: pointer;
-        }
-        
-        .update-icon {
-          width: 16px;
-          height: 16px;
-        }
-      `}</style>
+      <div className="update-content">
+        <RefreshCw className="update-icon" />
+        <div className="update-message">
+          <h3>Novos conteúdos disponíveis</h3>
+          <p>Atualizações foram encontradas para os cases de co-criação</p>
+        </div>
+      </div>
+      <div className="update-actions">
+        <button className="update-button" onClick={handleUpdate}>
+          Atualizar agora
+        </button>
+        <button className="dismiss-button" onClick={handleClose}>
+          Mais tarde
+        </button>
+      </div>
     </div>
   );
 };

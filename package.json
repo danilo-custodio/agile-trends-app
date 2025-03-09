@@ -15,10 +15,11 @@
   },
   "scripts": {
     "start": "node node_modules/react-scripts/scripts/start.js",
-    "build": "node node_modules/react-scripts/scripts/build.js",
+    "prebuild": "echo 'Preparando build...'",
+    "build": "node node_modules/react-scripts/scripts/build.js && npm run copy-data",
+    "copy-data": "if not exist build\\data mkdir build\\data && xcopy /E /I /Y data build\\data",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "node node_modules/bin/serve -s build",
     "preview": "http-server ./build -p 8080"
   },
   "eslintConfig": {

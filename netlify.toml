@@ -27,3 +27,28 @@
   [headers.values]
     Content-Type = "application/manifest+json"
     Cache-Control = "public, max-age=3600"
+
+# Novas configurações para arquivos JSON
+[[headers]]
+  for = "/data/*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/data/cases/*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=3600"
+
+# Garantir que /data e seus subdiretórios sejam copiados para a pasta de build
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"
+
+  [plugins.inputs]
+    postBuild = """
+    mkdir -p publish/data/cases
+    cp -r data/* publish/data/
+    """

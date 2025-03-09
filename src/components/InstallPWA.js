@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Download } from 'lucide-react';
+import { Download, X } from 'lucide-react';
+import '../styles/StatusIndicators.css'; // Importar os estilos que criamos
 
 const InstallPWA = () => {
   const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
     const handler = (e) => {
@@ -18,7 +20,8 @@ const InstallPWA = () => {
 
     // Verifica se o app já está instalado
     const checkInstalled = () => {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
+      if (window.matchMedia('(display-mode: standalone)').matches || 
+          window.navigator.standalone) { // Suporte para iOS
         setIsInstalled(true);
       }
     };
@@ -48,53 +51,34 @@ const InstallPWA = () => {
     });
   };
 
-  if (!supportsPWA || isInstalled) {
+  const handleDismiss = () => {
+    setShowBanner(false);
+  };
+
+  // Não exibir nada se o PWA não for suportado, já estiver instalado ou o banner foi fechado
+  if (!supportsPWA || isInstalled || !showBanner) {
     return null;
   }
 
   return (
-    <div className="install-container">
-      <button 
-        className="install-button" 
-        onClick={handleInstallClick}
-      >
-        <Download className="install-icon" />
-        <span>Instalar App</span>
-      </button>
-      <style jsx="true">{`
-        .install-container {
-          position: fixed;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 1000;
-        }
-        
-        .install-button {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          background-color: #3b82f6;
-          color: white;
-          border: none;
-          padding: 12px 24px;
-          border-radius: 8px;
-          font-weight: bold;
-          cursor: pointer;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: all 0.2s;
-        }
-        
-        .install-button:hover {
-          background-color: #2563eb;
-          transform: translateY(-2px);
-        }
-        
-        .install-icon {
-          width: 20px;
-          height: 20px;
-        }
-      `}</style>
+    <div className="pwa-install-banner">
+      <div className="pwa-install-content">
+        <div className="pwa-install-icon">
+          <Download />
+        </div>
+        <div className="pwa-install-message">
+          <h3>Instale nosso aplicativo</h3>
+          <p>Adicione Cases de Co-criação à sua tela inicial para acesso rápido e offline</p>
+        </div>
+      </div>
+      <div className="pwa-install-actions">
+        <button className="pwa-install-button" onClick={handleInstallClick}>
+          Instalar
+        </button>
+        <button className="pwa-close-button" onClick={handleDismiss}>
+          <X size={16} />
+        </button>
+      </div>
     </div>
   );
 };
