@@ -17,7 +17,7 @@
     "start": "node node_modules/react-scripts/scripts/start.js",
     "prebuild": "echo 'Preparando build...'",
     "build": "node node_modules/react-scripts/scripts/build.js && npm run copy-data",
-    "copy-data": "if not exist build\\data mkdir build\\data && xcopy /E /I /Y data build\\data",
+    "copy-data": "mkdir -p build/data && cp -r data/* build/data/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preview": "http-server ./build -p 8080"
