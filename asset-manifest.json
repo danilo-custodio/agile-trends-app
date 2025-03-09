@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.113fc0b4.css",
-    "main.js": "/static/js/main.cf4228f9.js",
-    "index.html": "/index.html",
-    "main.113fc0b4.css.map": "/static/css/main.113fc0b4.css.map",
-    "main.cf4228f9.js.map": "/static/js/main.cf4228f9.js.map"
+    "main.css": "/agile-trends-app/static/css/main.113fc0b4.css",
+    "main.js": "/agile-trends-app/static/js/main.227c74e9.js",
+    "index.html": "/agile-trends-app/index.html",
+    "main.113fc0b4.css.map": "/agile-trends-app/static/css/main.113fc0b4.css.map",
+    "main.227c74e9.js.map": "/agile-trends-app/static/js/main.227c74e9.js.map"
   },
   "entrypoints": [
     "static/css/main.113fc0b4.css",
-    "static/js/main.cf4228f9.js"
+    "static/js/main.227c74e9.js"
   ]
 }
