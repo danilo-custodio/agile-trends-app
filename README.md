@@ -70,3 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Adicione todas as mudanças feitas
+git add .
+
+# Faça um commit com uma mensagem descritiva
+git commit -m "Transformar aplicativo em PWA"
+
+# Envie as alterações para o repositório remoto
+git push origin main  # ou master, dependendo do nome da sua branch principal
