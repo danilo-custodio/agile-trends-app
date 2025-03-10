@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RefreshCw, X } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import '../styles/UpdateNotification.css';
 
 const UpdateNotification = ({ onUpdate }) => {

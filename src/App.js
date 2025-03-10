@@ -19,12 +19,14 @@ const iconMap = {
 
 const CasesApp = () => {
   const [cases, setCases] = useState([]);
-  const [selectedCase, setSelectedCase] = useState(null);
+  const [selectedCaseId, setSelectedCaseId] = useState(null);
+  const [caseDetails, setCaseDetails] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [offlineMode, setOfflineMode] = useState(!navigator.onLine);
   const [updateAvailable, setUpdateAvailable] = useState(false);
+  
 
   // Verificar status de conexão
   useEffect(() => {
@@ -63,10 +65,10 @@ const CasesApp = () => {
 
   // Carregar detalhes do case quando selecionado
   useEffect(() => {
-    if (selectedCase && selectedCase.id) {
-      loadCaseDetails(selectedCase.id);
+    if (selectedCaseId) {
+      loadCaseDetails(selectedCaseId);
     }
-  }, [selectedCase]);
+  }, [selectedCaseId]);
 
   // Carregar lista de cases
   const loadCases = async () => {
@@ -100,12 +102,13 @@ const CasesApp = () => {
       setLoading(true);
       
       const caseData = await casesAPI.loadCase(caseId);
+      console.log("Dados do case carregado:", caseData);
       
       if (caseData) {
         // Adicionar o componente de ícone
         const CaseIcon = iconMap[caseData.iconName] || BarChart3;
         
-        setSelectedCase({
+        setCaseDetails({
           ...caseData,
           icon: CaseIcon
         });
@@ -143,8 +146,8 @@ const CasesApp = () => {
           await loadCases();
           
           // Se o case atual foi atualizado, recarregar seus detalhes
-          if (selectedCase && result.updatedCases.includes(selectedCase.id)) {
-            await loadCaseDetails(selectedCase.id);
+          if (selectedCaseId && result.updatedCases.includes(selectedCaseId)) {
+            await loadCaseDetails(selectedCaseId);
           }
           
           setUpdateAvailable(false);
@@ -180,7 +183,7 @@ const CasesApp = () => {
           <div 
             key={caseItem.id} 
             className={`case-card ${caseItem.color}`}
-            onClick={() => setSelectedCase(caseItem)}
+            onClick={() => setSelectedCaseId(caseItem.id)}
           >
             <div className="card-header">
               <div className="icon-container">
@@ -215,7 +218,7 @@ const CasesApp = () => {
   };
   
   const renderCaseDetail = () => {
-    if (!selectedCase) return null;
+    if (!caseDetails) return null;
     
     if (loading) {
       return <div className="loading-indicator">Carregando detalhes do case...</div>;
@@ -229,19 +232,22 @@ const CasesApp = () => {
       <div className="case-detail">
         <button 
           className="back-button"
-          onClick={() => setSelectedCase(null)}
+          onClick={() => {
+            setSelectedCaseId(null);
+            setCaseDetails(null);
+          }}
         >
           ← Voltar para lista de cases
         </button>
         
         <div className="case-header">
-          <div className={`icon-container ${selectedCase.color}`}>
-            <selectedCase.icon className="icon" />
+          <div className={`icon-container ${caseDetails.color}`}>
+            <caseDetails.icon className="icon" />
           </div>
           <div>
-            <h1 className="case-title">{selectedCase.title}</h1>
-            {selectedCase.productName && (
-              <p className="product-name">Produto: {selectedCase.productName}</p>
+            <h1 className="case-title">{caseDetails.title}</h1>
+            {caseDetails.productName && (
+              <p className="product-name">Produto: {caseDetails.productName}</p>
             )}
           </div>
         </div>
@@ -285,20 +291,20 @@ const CasesApp = () => {
               <div className="overview-card">
                 <h2 className="content-title">Sobre este Case</h2>
                 <p className="overview-description">
-                  {selectedCase.tabs?.overview?.description || selectedCase.description}
+                  {caseDetails.tabs?.overview?.description || caseDetails.description}
                 </p>
                 <div className="metrics-grid">
                   <div className="metric-box">
                     <h3 className="metric-title">
                       <Clock className="small-icon" /> Redução de Tempo
                     </h3>
-                    <p className="metric-value time-value">{selectedCase.timeReduction}</p>
+                    <p className="metric-value time-value">{caseDetails.timeReduction}</p>
                   </div>
                   <div className="metric-box">
                     <h3 className="metric-title">
                       <BarChart3 className="small-icon" /> Melhoria de Qualidade
                     </h3>
-                    <p className="metric-value quality-value">{selectedCase.qualityImprovement}</p>
+                    <p className="metric-value quality-value">{caseDetails.qualityImprovement}</p>
                   </div>
                 </div>
               </div>
@@ -306,7 +312,7 @@ const CasesApp = () => {
               <div className="highlights-card">
                 <h2 className="content-title">Destaques</h2>
                 <ul className="highlights-list">
-                  {selectedCase.highlights?.map((highlight, index) => (
+                  {caseDetails.highlights?.map((highlight, index) => (
                     <li key={index} className="highlight-item">
                       <ArrowRight className="highlight-icon" />
                       <span>{highlight}</span>
@@ -332,7 +338,7 @@ const CasesApp = () => {
                 <div className="video-info">
                   <h3 className="info-title">Neste vídeo você verá:</h3>
                   <ul className="info-list">
-                    {selectedCase.tabs?.video?.highlights?.map((item, index) => (
+                    {caseDetails.tabs?.video?.highlights?.map((item, index) => (
                       <li key={index}>{item}</li>
                     )) || (
                       <>
@@ -347,7 +353,7 @@ const CasesApp = () => {
                 <div className="additional-resources">
                   <h3 className="resources-title">Recursos adicionais:</h3>
                   <div className="resources-tags">
-                    {selectedCase.tabs?.video?.resources?.map((resource, index) => (
+                    {caseDetails.tabs?.video?.resources?.map((resource, index) => (
                       <span key={index} className={`tag ${resource.type}`}>{resource.name}</span>
                     )) || (
                       <>
@@ -369,14 +375,14 @@ const CasesApp = () => {
                 <div className="prompt-example">
                   <h3 className="example-title">Exemplo de Prompt Utilizado:</h3>
                   <div className="example-code">
-                    <pre>{selectedCase.promptExample}</pre>
+                    <pre>{caseDetails.promptExample}</pre>
                   </div>
                 </div>
                 
                 <div className="process-steps">
                   <h3 className="steps-title">Etapas do Processo:</h3>
                   <ol className="steps-list">
-                    {selectedCase.tabs?.process?.steps?.map((step, index) => (
+                    {caseDetails.tabs?.process?.steps?.map((step, index) => (
                       <li key={index}>{step}</li>
                     )) || (
                       <>
@@ -399,7 +405,7 @@ const CasesApp = () => {
                 <h2 className="content-title">Resultados Obtidos</h2>
                 <p className="result-label">Resultado Final:</p>
                 <div className="result-box">
-                  <p>{selectedCase.result}</p>
+                  <p>{caseDetails.result}</p>
                 </div>
                 
                 <h3 className="comparison-title">Comparação Antes vs. Depois:</h3>
@@ -407,7 +413,7 @@ const CasesApp = () => {
                   <div className="before-box">
                     <h4 className="before-title">Antes</h4>
                     <ul className="comparison-list">
-                      {selectedCase.tabs?.results?.before?.map((item, index) => (
+                      {caseDetails.tabs?.results?.before?.map((item, index) => (
                         <li key={index} className="negative">{item}</li>
                       )) || (
                         <>
@@ -421,7 +427,7 @@ const CasesApp = () => {
                   <div className="after-box">
                     <h4 className="after-title">Depois</h4>
                     <ul className="comparison-list">
-                      {selectedCase.tabs?.results?.after?.map((item, index) => (
+                      {caseDetails.tabs?.results?.after?.map((item, index) => (
                         <li key={index} className="positive">{item}</li>
                       )) || (
                         <>
@@ -445,7 +451,7 @@ const CasesApp = () => {
                   <div className="lesson-section">
                     <h3 className="section-title">O que funcionou bem:</h3>
                     <ul className="section-list">
-                      {selectedCase.tabs?.lessons?.whatWorked?.map((item, index) => (
+                      {caseDetails.tabs?.lessons?.whatWorked?.map((item, index) => (
                         <li key={index}>{item}</li>
                       )) || (
                         <>
@@ -460,7 +466,7 @@ const CasesApp = () => {
                   <div className="lesson-section">
                     <h3 className="section-title">O que poderia ser melhorado:</h3>
                     <ul className="section-list">
-                      {selectedCase.tabs?.lessons?.improvementAreas?.map((item, index) => (
+                      {caseDetails.tabs?.lessons?.improvementAreas?.map((item, index) => (
                         <li key={index}>{item}</li>
                       )) || (
                         <>
@@ -476,7 +482,7 @@ const CasesApp = () => {
                     <h3 className="section-title">Dicas para replicar este sucesso:</h3>
                     <div className="tips-box">
                       <ol className="tips-list">
-                        {selectedCase.tabs?.lessons?.tips?.map((tip, index) => (
+                        {caseDetails.tabs?.lessons?.tips?.map((tip, index) => (
                           <li key={index}>{tip}</li>
                         )) || (
                           <>
@@ -516,7 +522,7 @@ const CasesApp = () => {
         <p className="app-subtitle">Uma biblioteca de experiências práticas apresentadas no Agile Trends 2025</p>
       </header>
       
-      {selectedCase ? renderCaseDetail() : renderCaseList()}
+      {selectedCaseId ? renderCaseDetail() : renderCaseList()}
       
       <InstallPWA />
     </div>

@@ -4,7 +4,7 @@ import casesDB from './db';
 class CasesAPI {
   constructor() {
     // A URL base será o domínio onde está hospedado o site
-    this.baseUrl = window.location.origin;
+    this.baseUrl = process.env.PUBLIC_URL || '';
     this.dataPath = '/data';
   }
 

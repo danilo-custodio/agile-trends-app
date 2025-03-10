@@ -2,6 +2,7 @@
   "name": "agile-trends-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://danilo-custodio.github.io/agile-trends-app/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -17,10 +18,12 @@
     "start": "node node_modules/react-scripts/scripts/start.js",
     "prebuild": "echo 'Preparando build...'",
     "build": "node node_modules/react-scripts/scripts/build.js && npm run copy-data",
-    "copy-data": "mkdir -p build/data && cp -r data/* build/data/",
+    "copy-data": "if not exist build\\data mkdir build\\data && xcopy /E /I /Y data build\\data",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "preview": "http-server ./build -p 8080"
+    "preview": "http-server ./build -p 8080",
+    "deploy": "node node_modules/gh-pages/bin/gh-pages.js -d build",
+    "deploy:netlify": "npm run build && cp -r ./data ./build/ && netlify deploy --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +44,10 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "http-server": "^14.1.1",
     "serve": "^14.2.4"
   }
 }
+
+
