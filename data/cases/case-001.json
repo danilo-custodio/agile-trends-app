@@ -9,12 +9,13 @@
   "color": "bg-blue-100",
   "author": "Maria Silva",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-03-11T03:35:15.095Z",
+  "updatedAt": "2025-03-11T18:18:29.608Z",
   "version": 1,
   "highlights": [
     "Eliminação de 8 reuniões de refinamento",
     "Identificação de 12 casos de borda não considerados",
-    "Redução de retrabalho em 65%"
+    "Redução de retrabalho em 65%",
+    ""
   ],
   "promptExample": "Analise os seguintes requisitos de negócio e transforme-os em histórias de usuário detalhadas com critérios de aceitação...",
   "result": "24 histórias de usuário com critérios de aceitação claros e testáveis",
