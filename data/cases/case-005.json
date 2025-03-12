@@ -1,0 +1,60 @@
+{
+  "id": "case-005",
+  "title": "Teste 1",
+  "category": "Teste 1",
+  "description": "Teste 1",
+  "timeReduction": "85%",
+  "qualityImprovement": "70%",
+  "iconName": "Lightbulb",
+  "color": "bg-blue-100",
+  "author": "Teste 1",
+  "summary": "Teste 1",
+  "promptExample": "Teste 1",
+  "result": "Teste 1",
+  "videoLength": "",
+  "videoViews": "",
+  "productName": "Teste 1",
+  "createdAt": "2025-03-12T01:28:14.939Z",
+  "updatedAt": "2025-03-12T01:28:14.939Z",
+  "version": 1,
+  "highlights": [
+    "Teste 1"
+  ],
+  "tabs": {
+    "overview": {
+      "description": "Teste 1"
+    },
+    "video": {
+      "url": "",
+      "thumbnail": "",
+      "highlights": [
+        ""
+      ],
+      "resources": []
+    },
+    "process": {
+      "steps": [
+        "Teste 1"
+      ]
+    },
+    "results": {
+      "before": [
+        "Teste 1"
+      ],
+      "after": [
+        "Teste 1"
+      ]
+    },
+    "lessons": {
+      "whatWorked": [
+        "Teste 1"
+      ],
+      "improvementAreas": [
+        "Teste 1"
+      ],
+      "tips": [
+        "Teste 1"
+      ]
+    }
+  }
+}
