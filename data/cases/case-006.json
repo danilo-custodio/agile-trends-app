@@ -1,0 +1,60 @@
+{
+  "id": "case-006",
+  "title": "Teste",
+  "category": "Teste",
+  "description": "Teste",
+  "timeReduction": "70%",
+  "qualityImprovement": "90%",
+  "iconName": "Lightbulb",
+  "color": "bg-blue-100",
+  "author": "Teste",
+  "summary": "Teste",
+  "promptExample": "",
+  "result": "",
+  "videoLength": "",
+  "videoViews": "",
+  "productName": "",
+  "createdAt": "2025-03-12T00:01:58.439Z",
+  "updatedAt": "2025-03-12T00:01:58.439Z",
+  "version": 1,
+  "highlights": [
+    ""
+  ],
+  "tabs": {
+    "overview": {
+      "description": ""
+    },
+    "video": {
+      "url": "",
+      "thumbnail": "",
+      "highlights": [
+        ""
+      ],
+      "resources": []
+    },
+    "process": {
+      "steps": [
+        ""
+      ]
+    },
+    "results": {
+      "before": [
+        ""
+      ],
+      "after": [
+        ""
+      ]
+    },
+    "lessons": {
+      "whatWorked": [
+        ""
+      ],
+      "improvementAreas": [
+        ""
+      ],
+      "tips": [
+        ""
+      ]
+    }
+  }
+}
