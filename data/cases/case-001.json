@@ -1,43 +1,43 @@
 {
   "id": "case-001",
-  "title": "Refinamento de Requisitos ¡geis",
+  "title": "Refinamento de Requisitos √Ågeis",
   "category": "Requisitos",
-  "description": "Como transformamos requisitos vagos em histÛrias de usu·rio detalhadas usando Claude",
+  "description": "Como transformamos requisitos vagos em hist√≥rias de usu√°rio detalhadas usando Claude",
   "timeReduction": "70%",
   "qualityImprovement": "85%",
   "iconName": "Lightbulb",
   "color": "bg-blue-100",
   "author": "Maria Silva Teste",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-03-11T23:49:13.277Z",
+  "updatedAt": "2025-03-12T01:20:00.024Z",
   "version": 1,
   "highlights": [
-    "EliminaÁ„o de 8 reuniıes de refinamento",
-    "IdentificaÁ„o de 12 casos de borda n„o considerados",
-    "ReduÁ„o de retrabalho em 65%",
+    "Elimina√ß√£o de 8 reuni√µes de refinamento",
+    "Identifica√ß√£o de 12 casos de borda n√£o considerados",
+    "Redu√ß√£o de retrabalho em 65%",
     ""
   ],
-  "promptExample": "Analise os seguintes requisitos de negÛcio e transforme-os em histÛrias de usu·rio detalhadas com critÈrios de aceitaÁ„o...",
-  "result": "24 histÛrias de usu·rio com critÈrios de aceitaÁ„o claros e test·veis",
+  "promptExample": "Analise os seguintes requisitos de neg√≥cio e transforme-os em hist√≥rias de usu√°rio detalhadas com crit√©rios de aceita√ß√£o...",
+  "result": "24 hist√≥rias de usu√°rio com crit√©rios de aceita√ß√£o claros e test√°veis",
   "videoLength": "6:42",
   "videoViews": "342",
   "productName": "RefineAI - Refinamento Automatizado de Requisitos",
   "tabs": {
     "overview": {
-      "description": "Este case demonstra como utilizamos LLMs para transformar requisitos de negÛcio vagos em histÛrias de usu·rio detalhadas e prontas para desenvolvimento. A abordagem eliminou v·rias rodadas de reuniıes de refinamento e ajudou a identificar casos de borda frequentemente negligenciados."
+      "description": "Este case demonstra como utilizamos LLMs para transformar requisitos de neg√≥cio vagos em hist√≥rias de usu√°rio detalhadas e prontas para desenvolvimento. A abordagem eliminou v√°rias rodadas de reuni√µes de refinamento e ajudou a identificar casos de borda frequentemente negligenciados."
     },
     "video": {
       "url": "videos/case-001-demo.mp4",
       "thumbnail": "thumbnails/case-001-video.jpg",
       "highlights": [
-        "DemonstraÁ„o das principais funcionalidades",
-        "Interface e experiÍncia do usu·rio",
+        "Demonstra√ß√£o das principais funcionalidades",
+        "Interface e experi√™ncia do usu√°rio",
         "Como o produto resolve o problema proposto",
-        "Diferenciais em relaÁ„o a soluÁıes tradicionais"
+        "Diferenciais em rela√ß√£o a solu√ß√µes tradicionais"
       ],
       "resources": [
         {
-          "name": "DocumentaÁ„o tÈcnica",
+          "name": "Documenta√ß√£o t√©cnica",
           "type": "blue-tag",
           "url": "#"
         },
@@ -55,42 +55,42 @@
     },
     "process": {
       "steps": [
-        "DefiniÁ„o clara do problema e objetivos desejados",
-        "CriaÁ„o de prompts estruturados com contexto adequado",
-        "IteraÁ„o e refinamento com base no feedback do LLM",
-        "ValidaÁ„o dos resultados com stakeholders",
-        "ImplementaÁ„o e mediÁ„o de resultados"
+        "Defini√ß√£o clara do problema e objetivos desejados",
+        "Cria√ß√£o de prompts estruturados com contexto adequado",
+        "Itera√ß√£o e refinamento com base no feedback do LLM",
+        "Valida√ß√£o dos resultados com stakeholders",
+        "Implementa√ß√£o e medi√ß√£o de resultados"
       ]
     },
     "results": {
       "before": [
         "Processo manual demorado",
-        "InconsistÍncias entre documentos",
+        "Inconsist√™ncias entre documentos",
         "Altos custos de retrabalho"
       ],
       "after": [
-        "Processo r·pido e consistente",
-        "DocumentaÁ„o sempre atualizada",
-        "Qualidade superior desde o inÌcio"
+        "Processo r√°pido e consistente",
+        "Documenta√ß√£o sempre atualizada",
+        "Qualidade superior desde o in√≠cio"
       ]
     },
     "lessons": {
       "whatWorked": [
-        "Fornecer contexto detalhado no inÌcio da conversa",
+        "Fornecer contexto detalhado no in√≠cio da conversa",
         "Dividir tarefas complexas em etapas menores",
         "Iterar sobre os resultados iniciais"
       ],
       "improvementAreas": [
-        "Definir melhor os critÈrios de aceitaÁ„o",
+        "Definir melhor os crit√©rios de aceita√ß√£o",
         "Incluir mais exemplos no prompt",
-        "Estabelecer um processo de validaÁ„o mais robusto"
+        "Estabelecer um processo de valida√ß√£o mais robusto"
       ],
       "tips": [
         "Defina claramente o problema e o resultado esperado",
-        "ForneÁa exemplos concretos do que vocÍ espera",
+        "Forne√ßa exemplos concretos do que voc√™ espera",
         "Use uma abordagem iterativa para refinar resultados",
-        "Combine a expertise humana com as sugestıes do LLM",
-        "Documente os prompts eficazes para reutilizaÁ„o"
+        "Combine a expertise humana com as sugest√µes do LLM",
+        "Documente os prompts eficazes para reutiliza√ß√£o"
       ]
     }
   },
