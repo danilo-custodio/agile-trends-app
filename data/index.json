@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-03-12T01:26:10.221Z",
+  "lastUpdated": "2025-03-12T01:27:18.134Z",
   "cases": [
     {
       "id": "case-001",
@@ -24,7 +24,7 @@
       "iconName": "Code",
       "color": "bg-green-100",
       "summary": "Teste",
-      "updatedAt": "2025-03-12T01:26:06.738Z"
+      "updatedAt": "2025-03-12T01:27:17.430Z"
     },
     {
       "id": "case-003",
