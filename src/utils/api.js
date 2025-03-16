@@ -71,20 +71,30 @@ class CasesAPI {
           return cachedCase;
         }
       }
-
+  
       // Se forçar refresh ou não tiver cache, buscar do servidor
       console.log(`Buscando case ${caseId} do servidor...`);
-      const response = await fetch(`${this.baseUrl}${this.dataPath}/cases/${caseId}.json`);
+      
+      // Adicionar opções de cache quando forceRefresh é true
+      const fetchOptions = forceRefresh ? { 
+        cache: 'no-cache',
+        headers: { 'Pragma': 'no-cache' } 
+      } : {};
+      
+      const response = await fetch(
+        `${this.baseUrl}${this.dataPath}/cases/${caseId}.json`, 
+        fetchOptions
+      );
       
       if (!response.ok) {
         throw new Error(`Falha ao buscar case ${caseId}: ${response.status}`);
       }
-
+  
       const caseData = await response.json();
-
+  
       // Salvar no IndexedDB para uso offline
       await casesDB.saveCase(caseData);
-
+  
       console.log(`Case ${caseId} carregado e cacheado do servidor`);
       return caseData;
     } catch (error) {
@@ -202,7 +212,7 @@ class CasesAPI {
         timestamp: new Date().toISOString()
       });
       
-      // Também limpar o cache do service worker para os arquivos JSON
+      // Limpar o cache do service worker para todos os arquivos JSON
       if ('caches' in window) {
         try {
           const cache = await caches.open(CACHE_NAME);
@@ -219,10 +229,26 @@ class CasesAPI {
         }
       }
       
-      // Carregar os dados completos de cada case
+      // Forçar o carregamento dos dados completos de cada case diretamente do servidor
       for (const caseItem of serverCases) {
-        // Fazer com que o loadCase ignore o cache
-        await this.loadCase(caseItem.id, true);
+        try {
+          // Usar fetch diretamente com opções no-cache para garantir dados atualizados
+          const response = await fetch(`${this.baseUrl}${this.dataPath}/cases/${caseItem.id}.json`, {
+            cache: 'no-cache',
+            headers: { 'Pragma': 'no-cache' }
+          });
+          
+          if (response.ok) {
+            const caseData = await response.json();
+            // Atualizar o case no IndexedDB
+            await casesDB.saveCase(caseData);
+            console.log(`Case ${caseItem.id} atualizado com sucesso`);
+          } else {
+            console.error(`Falha ao buscar case ${caseItem.id}: ${response.status}`);
+          }
+        } catch (error) {
+          console.error(`Erro ao atualizar case ${caseItem.id}:`, error);
+        }
       }
       
       return {
