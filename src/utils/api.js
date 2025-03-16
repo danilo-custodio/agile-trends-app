@@ -102,54 +102,70 @@ class CasesAPI {
   // Verifica se há atualizações disponíveis
   async checkForUpdates() {
     try {
-      // Obter timestamp da última sincronização
+      // Obter informações da última sincronização
       const lastSync = await casesDB.getSyncInfo('lastIndexSync');
       const lastSyncTime = lastSync ? lastSync.timestamp : null;
   
-      // Obter o índice atual do servidor com cabeçalho para evitar cache
+      // Obter o índice atual do servidor com cache desabilitado
       const response = await fetch(`${this.baseUrl}${this.dataPath}/index.json`, {
         cache: 'no-cache',
-        headers: {
-          'If-Modified-Since': lastSyncTime || ''
-        }
+        headers: { 'Pragma': 'no-cache' }
       });
       
-      // Se o status for 304 (Not Modified), não há atualizações
-      if (response.status === 304) {
-        return { hasUpdates: false };
-      }
-      
-      // Se a resposta não for ok e não for 304, tratar como erro
       if (!response.ok) {
         throw new Error(`Falha ao verificar atualizações: ${response.status}`);
       }
   
       const data = await response.json();
-      
-      // Comparar IDs dos cases do servidor com os do cache
+      const serverLastUpdated = data.lastUpdated || new Date().toISOString();
       const serverCases = data.cases || [];
-      const cachedCases = await casesDB.getCasesIndex();
       
-      // Verificar se há diferenças nos IDs (adições, remoções, etc.)
-      const serverIds = new Set(serverCases.map(c => c.id));
-      const cachedIds = new Set(cachedCases.map(c => c.id));
+      // Se não há registro de última sincronização, considerar como atualização
+      if (!lastSyncTime) {
+        return { hasUpdates: true, serverCases, serverLastUpdated };
+      }
       
-      // Se o número de cases ou os IDs forem diferentes, há atualizações
-      const hasChanges = 
-        serverIds.size !== cachedIds.size || 
-        serverCases.some(c => !cachedIds.has(c.id)) ||
-        cachedCases.some(c => !serverIds.has(c.id));
+      // Verificar se a data de atualização do servidor é mais recente
+      const isNewer = new Date(serverLastUpdated) > new Date(lastSyncTime);
       
-      return {
-        hasUpdates: hasChanges,
-        serverCases
+      // Mesmo que a data não seja mais recente, comparar o conteúdo
+      if (!isNewer) {
+        const cachedCases = await casesDB.getCasesIndex();
+        
+        // Verificar se o número de cases é diferente
+        if (serverCases.length !== cachedCases.length) {
+          return { hasUpdates: true, serverCases, serverLastUpdated };
+        }
+        
+        // Comparar IDs para detectar exclusões
+        const serverIds = new Set(serverCases.map(c => c.id));
+        const cachedIds = new Set(cachedCases.map(c => c.id));
+        const hasChangedIds = 
+          [...serverIds].some(id => !cachedIds.has(id)) || 
+          [...cachedIds].some(id => !serverIds.has(id));
+        
+        if (hasChangedIds) {
+          return { hasUpdates: true, serverCases, serverLastUpdated };
+        }
+        
+        // Comparar conteúdo de cada case para detectar atualizações
+        for (const serverCase of serverCases) {
+          const cachedCase = cachedCases.find(c => c.id === serverCase.id);
+          // Se o case foi atualizado depois da última sincronização
+          if (cachedCase && new Date(serverCase.updatedAt) > new Date(lastSyncTime)) {
+            return { hasUpdates: true, serverCases, serverLastUpdated };
+          }
+        }
+      }
+      
+      return { 
+        hasUpdates: isNewer, 
+        serverCases: isNewer ? serverCases : null,
+        serverLastUpdated
       };
     } catch (error) {
       console.error('Erro ao verificar atualizações:', error);
-      return {
-        hasUpdates: false,
-        error: error.message
-      };
+      return { hasUpdates: false };
     }
   }
 

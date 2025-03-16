@@ -32,7 +32,7 @@ const CasesApp = () => {
   useEffect(() => {
     const handleOnline = () => {
       setOfflineMode(false);
-      // Sincronizar quando ficar online
+      // Adicione esta linha para sincronizar quando ficar online
       syncCases();
     };
     const handleOffline = () => setOfflineMode(true);
@@ -46,13 +46,19 @@ const CasesApp = () => {
     };
   }, []);
 
-  // Carregar lista de cases ao iniciar
   useEffect(() => {
-    loadCases();
-
-    // Verificar atualizações a cada 30 minutos
-    const checkInterval = setInterval(checkForUpdates, 30 * 60 * 1000);
+    const initializeApp = async () => {
+      await loadCases();
+      
+      // Adicione estas linhas para sincronizar no início se estiver online
+      if (navigator.onLine) {
+        syncCases();
+      }
+    };
     
+    initializeApp();
+    
+    const checkInterval = setInterval(checkForUpdates, 30 * 60 * 1000);
     return () => clearInterval(checkInterval);
   }, []);
 

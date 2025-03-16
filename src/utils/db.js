@@ -149,6 +149,7 @@ class CasesDatabase {
         request.onerror = (event) => reject(event.target.error);
       });
     }
+
     async clearAllCases() {
       await this.ready;
       
@@ -167,6 +168,7 @@ class CasesDatabase {
         transaction.onerror = (event) => reject(event.target.error);
       });
     }
+    
   }
   
   // Exporta uma instância única do banco de dados
