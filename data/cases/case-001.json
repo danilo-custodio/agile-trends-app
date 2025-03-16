@@ -1,6 +1,6 @@
 {
   "id": "case-001",
-  "title": "Refinamento de Requisitos Ágeis",
+  "title": "Refinamento de Requisitos Ágeis Teste",
   "category": "Requisitos",
   "description": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude",
   "timeReduction": "70%",
@@ -9,7 +9,7 @@
   "color": "bg-blue-100",
   "author": "Maria Silva",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-03-16T14:08:08.912Z",
+  "updatedAt": "2025-03-16T14:34:14.754Z",
   "version": 1,
   "highlights": [
     "Eliminação de 8 reuniões de refinamento",
