@@ -105,45 +105,49 @@ class CasesAPI {
       // Obter timestamp da última sincronização
       const lastSync = await casesDB.getSyncInfo('lastIndexSync');
       const lastSyncTime = lastSync ? lastSync.timestamp : null;
-
-      // Obter o índice atual do servidor
-      console.log('Verificando atualizações...');
+  
+      // Obter o índice atual do servidor com cabeçalho para evitar cache
       const response = await fetch(`${this.baseUrl}${this.dataPath}/index.json`, {
-        cache: 'no-cache' // Forçar requisição recente
+        cache: 'no-cache',
+        headers: {
+          'If-Modified-Since': lastSyncTime || ''
+        }
       });
       
+      // Se o status for 304 (Not Modified), não há atualizações
+      if (response.status === 304) {
+        return { hasUpdates: false };
+      }
+      
+      // Se a resposta não for ok e não for 304, tratar como erro
       if (!response.ok) {
         throw new Error(`Falha ao verificar atualizações: ${response.status}`);
       }
-
+  
       const data = await response.json();
-      const serverCases = data.cases || [];
       
-      // Obter o índice atual do cache
+      // Comparar IDs dos cases do servidor com os do cache
+      const serverCases = data.cases || [];
       const cachedCases = await casesDB.getCasesIndex();
       
-      // Identificar cases que precisam ser atualizados
-      const casesToUpdate = [];
+      // Verificar se há diferenças nos IDs (adições, remoções, etc.)
+      const serverIds = new Set(serverCases.map(c => c.id));
+      const cachedIds = new Set(cachedCases.map(c => c.id));
       
-      for (const serverCase of serverCases) {
-        const cachedCase = cachedCases.find(c => c.id === serverCase.id);
-        
-        // Se não existe no cache ou a versão do servidor é mais recente
-        if (!cachedCase || serverCase.version > cachedCase.version) {
-          casesToUpdate.push(serverCase.id);
-        }
-      }
+      // Se o número de cases ou os IDs forem diferentes, há atualizações
+      const hasChanges = 
+        serverIds.size !== cachedIds.size || 
+        serverCases.some(c => !cachedIds.has(c.id)) ||
+        cachedCases.some(c => !serverIds.has(c.id));
       
       return {
-        hasUpdates: casesToUpdate.length > 0,
-        casesToUpdate,
-        lastSyncTime
+        hasUpdates: hasChanges,
+        serverCases
       };
     } catch (error) {
       console.error('Erro ao verificar atualizações:', error);
       return {
         hasUpdates: false,
-        casesToUpdate: [],
         error: error.message
       };
     }
@@ -152,9 +156,9 @@ class CasesAPI {
   // Sincroniza todos os cases que precisam de atualização
   async syncAllCases() {
     try {
-      const { hasUpdates, casesToUpdate } = await this.checkForUpdates();
+      const { hasUpdates, serverCases } = await this.checkForUpdates();
       
-      if (!hasUpdates) {
+      if (!hasUpdates || !serverCases) {
         return {
           success: true,
           message: 'Não há atualizações necessárias',
@@ -162,22 +166,27 @@ class CasesAPI {
         };
       }
       
-      console.log(`Sincronizando ${casesToUpdate.length} cases...`);
+      // Limpar todos os dados locais
+      await this.clearCache();
       
-      // Atualizar o índice primeiro
-      await this.loadCasesIndex(true);
+      // Salvar os novos dados do índice
+      await casesDB.saveCasesIndex(serverCases);
       
-      // Atualizar cada case individualmente
-      const updatedCases = [];
-      for (const caseId of casesToUpdate) {
-        await this.loadCase(caseId, true);
-        updatedCases.push(caseId);
+      // Salvar informação de última sincronização
+      await casesDB.saveSyncInfo({
+        key: 'lastIndexSync',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Carregar os detalhes de cada case
+      for (const caseItem of serverCases) {
+        await this.loadCase(caseItem.id, true);
       }
       
       return {
         success: true,
-        message: `Atualizados ${updatedCases.length} cases`,
-        updatedCases
+        message: `Dados atualizados com sucesso`,
+        updatedCases: serverCases.map(c => c.id)
       };
     } catch (error) {
       console.error('Erro ao sincronizar cases:', error);
@@ -186,6 +195,28 @@ class CasesAPI {
         message: error.message,
         updatedCases: []
       };
+    }
+  }
+  async clearCache() {
+    // Limpar os dados do IndexedDB
+    await casesDB.clearAllCases();
+    
+    // Também pode limpar o cache do Service Worker para recursos relacionados
+    if ('caches' in window) {
+      try {
+        const cache = await caches.open('cases-llm-v2');
+        
+        // Obter todas as chaves de cache que contêm '/data/'
+        const keys = await cache.keys();
+        const dataKeys = keys.filter(key => key.url.includes('/data/'));
+        
+        // Deletar cada chave de cache relacionada aos dados
+        for (const key of dataKeys) {
+          await cache.delete(key);
+        }
+      } catch (err) {
+        console.warn('Erro ao limpar cache do Service Worker:', err);
+      }
     }
   }
 }

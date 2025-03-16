@@ -30,12 +30,16 @@ const CasesApp = () => {
 
   // Verificar status de conexão
   useEffect(() => {
-    const handleOnline = () => setOfflineMode(false);
+    const handleOnline = () => {
+      setOfflineMode(false);
+      // Sincronizar quando ficar online
+      syncCases();
+    };
     const handleOffline = () => setOfflineMode(true);
-
+  
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-
+  
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);

@@ -149,6 +149,24 @@ class CasesDatabase {
         request.onerror = (event) => reject(event.target.error);
       });
     }
+    async clearAllCases() {
+      await this.ready;
+      
+      return new Promise((resolve, reject) => {
+        const transaction = this.db.transaction(['casesIndex', 'casesData'], 'readwrite');
+        
+        // Limpar store de índice
+        const indexStore = transaction.objectStore('casesIndex');
+        indexStore.clear();
+        
+        // Limpar store de dados
+        const dataStore = transaction.objectStore('casesData');
+        dataStore.clear();
+        
+        transaction.oncomplete = () => resolve(true);
+        transaction.onerror = (event) => reject(event.target.error);
+      });
+    }
   }
   
   // Exporta uma instância única do banco de dados
