@@ -1,84 +1,97 @@
 {
-    "id": "case-001",
-    "title": "Refinamento de Requisitos Ágeis",
-    "category": "Requisitos",
-    "description": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude",
-    "timeReduction": "70%",
-    "qualityImprovement": "85%",
-    "iconName": "Lightbulb",
-    "color": "bg-blue-100",
-    "author": "Maria Silva",
-    "createdAt": "2025-01-15T10:30:00Z",
-    "updatedAt": "2025-02-10T15:30:00Z",
-    "version": 1,
-    "highlights": [
-      "Eliminação de 8 reuniões de refinamento",
-      "Identificação de 12 casos de borda não considerados",
-      "Redução de retrabalho em 65%"
-    ],
-    "promptExample": "Analise os seguintes requisitos de negócio e transforme-os em histórias de usuário detalhadas com critérios de aceitação...",
-    "result": "24 histórias de usuário com critérios de aceitação claros e testáveis",
-    "videoLength": "6:42",
-    "videoViews": "342",
-    "productName": "RefineAI - Refinamento Automatizado de Requisitos",
-    "tabs": {
-      "overview": {
-        "description": "Este case demonstra como utilizamos LLMs para transformar requisitos de negócio vagos em histórias de usuário detalhadas e prontas para desenvolvimento. A abordagem eliminou várias rodadas de reuniões de refinamento e ajudou a identificar casos de borda frequentemente negligenciados."
-      },
-      "video": {
-        "url": "videos/case-001-demo.mp4",
-        "thumbnail": "thumbnails/case-001-video.jpg",
-        "highlights": [
-          "Demonstração das principais funcionalidades",
-          "Interface e experiência do usuário",
-          "Como o produto resolve o problema proposto",
-          "Diferenciais em relação a soluções tradicionais"
-        ],
-        "resources": [
-          {"name": "Documentação técnica", "type": "blue-tag", "url": "#"},
-          {"name": "Link para teste", "type": "green-tag", "url": "#"},
-          {"name": "Caso de uso completo", "type": "purple-tag", "url": "#"}
-        ]
-      },
-      "process": {
-        "steps": [
-          "Definição clara do problema e objetivos desejados",
-          "Criação de prompts estruturados com contexto adequado",
-          "Iteração e refinamento com base no feedback do LLM",
-          "Validação dos resultados com stakeholders",
-          "Implementação e medição de resultados"
-        ]
-      },
-      "results": {
-        "before": [
-          "Processo manual demorado",
-          "Inconsistências entre documentos",
-          "Altos custos de retrabalho"
-        ],
-        "after": [
-          "Processo rápido e consistente",
-          "Documentação sempre atualizada",
-          "Qualidade superior desde o início"
-        ]
-      },
-      "lessons": {
-        "whatWorked": [
-          "Fornecer contexto detalhado no início da conversa",
-          "Dividir tarefas complexas em etapas menores",
-          "Iterar sobre os resultados iniciais"
-        ],
-        "improvementAreas": [
-          "Definir melhor os critérios de aceitação",
-          "Incluir mais exemplos no prompt",
-          "Estabelecer um processo de validação mais robusto"
-        ],
-        "tips": [
-          "Defina claramente o problema e o resultado esperado",
-          "Forneça exemplos concretos do que você espera",
-          "Use uma abordagem iterativa para refinar resultados",
-          "Combine a expertise humana com as sugestões do LLM",
-          "Documente os prompts eficazes para reutilização"
-        ]
-      }
+  "id": "case-001",
+  "title": "Refinamento de Requisitos Ágeis Teste",
+  "category": "Requisitos",
+  "description": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude",
+  "timeReduction": "34%",
+  "qualityImprovement": "85%",
+  "iconName": "Lightbulb",
+  "color": "bg-blue-100",
+  "author": "Maria Silva",
+  "createdAt": "2025-01-15T10:30:00Z",
+  "updatedAt": "2025-03-16T15:56:05.465Z",
+  "version": 1,
+  "highlights": [
+    "Eliminação de 8 reuniões de refinamento",
+    "Identificação de 12 casos de borda não considerados",
+    "Redução de retrabalho em 65%"
+  ],
+  "promptExample": "Analise os seguintes requisitos de negócio e transforme-os em histórias de usuário detalhadas com critérios de aceitação...",
+  "result": "24 histórias de usuário com critérios de aceitação claros e testáveis",
+  "videoLength": "6:42",
+  "videoViews": "342",
+  "productName": "RefineAI - Refinamento Automatizado de Requisitos",
+  "tabs": {
+    "overview": {
+      "description": "Este case demonstra como utilizamos LLMs para transformar requisitos de negócio vagos em histórias de usuário detalhadas e prontas para desenvolvimento. A abordagem eliminou várias rodadas de reuniões de refinamento e ajudou a identificar casos de borda frequentemente negligenciados."
+    },
+    "video": {
+      "url": "videos/case-001-demo.mp4",
+      "thumbnail": "thumbnails/case-001-video.jpg",
+      "highlights": [
+        "Demonstração das principais funcionalidades",
+        "Interface e experiência do usuário",
+        "Como o produto resolve o problema proposto",
+        "Diferenciais em relação a soluções tradicionais"
+      ],
+      "resources": [
+        {
+          "name": "Documentação técnica",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Link para teste",
+          "type": "green-tag",
+          "url": "#"
+        },
+        {
+          "name": "Caso de uso completo",
+          "type": "purple-tag",
+          "url": "#"
+        }
+      ]
+    },
+    "process": {
+      "steps": [
+        "Definição clara do problema e objetivos desejados",
+        "Criação de prompts estruturados com contexto adequado",
+        "Iteração e refinamento com base no feedback do LLM",
+        "Validação dos resultados com stakeholders",
+        "Implementação e medição de resultados"
+      ]
+    },
+    "results": {
+      "before": [
+        "Processo manual demorado",
+        "Inconsistências entre documentos",
+        "Altos custos de retrabalho"
+      ],
+      "after": [
+        "Processo rápido e consistente",
+        "Documentação sempre atualizada",
+        "Qualidade superior desde o início"
+      ]
+    },
+    "lessons": {
+      "whatWorked": [
+        "Fornecer contexto detalhado no início da conversa",
+        "Dividir tarefas complexas em etapas menores",
+        "Iterar sobre os resultados iniciais"
+      ],
+      "improvementAreas": [
+        "Definir melhor os critérios de aceitação",
+        "Incluir mais exemplos no prompt",
+        "Estabelecer um processo de validação mais robusto"
+      ],
+      "tips": [
+        "Defina claramente o problema e o resultado esperado",
+        "Forneça exemplos concretos do que você espera",
+        "Use uma abordagem iterativa para refinar resultados",
+        "Combine a expertise humana com as sugestões do LLM",
+        "Documente os prompts eficazes para reutilização"
+      ]
     }
-  }
+  },
+  "summary": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude"
+}
