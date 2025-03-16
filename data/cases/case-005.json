@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "Teste",
   "createdAt": "2025-03-16T13:58:41.478Z",
-  "updatedAt": "2025-03-16T14:01:32.490Z",
+  "updatedAt": "2025-03-16T14:13:50.342Z",
   "version": 1,
   "highlights": [
     "Teste"
@@ -28,32 +28,32 @@
       "url": "",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Teste"
       ],
       "resources": []
     },
     "process": {
       "steps": [
-        ""
+        "Teste"
       ]
     },
     "results": {
       "before": [
-        ""
+        "Teste"
       ],
       "after": [
-        ""
+        "Teste"
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Teste"
       ],
       "improvementAreas": [
-        ""
+        "Teste"
       ],
       "tips": [
-        ""
+        "Teste"
       ]
     }
   }
