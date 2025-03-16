@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-03-16T14:27:47.299Z",
+  "lastUpdated": "2025-03-16T14:27:54.244Z",
   "cases": [
     {
       "id": "case-001",
@@ -51,18 +51,6 @@
       "color": "bg-purple-100",
       "summary": "Criação automatizada de documentação técnica e de usuário a partir do código",
       "updatedAt": "2025-03-16T14:07:44.689Z"
-    },
-    {
-      "id": "case-005",
-      "title": "Teste 1",
-      "category": "Teste 1",
-      "description": "Teste 1",
-      "timeReduction": "80%",
-      "qualityImprovement": "60%",
-      "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Teste",
-      "updatedAt": "2025-03-16T14:24:22.344Z"
     }
   ]
 }
