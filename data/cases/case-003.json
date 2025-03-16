@@ -1,84 +1,97 @@
 {
-    "id": "case-003",
-    "title": "Otimização de Performance",
-    "category": "Performance",
-    "description": "Identificação e resolução de gargalos de performance em aplicação React",
-    "timeReduction": "80%",
-    "qualityImprovement": "90%",
-    "iconName": "Zap",
-    "color": "bg-yellow-100",
-    "author": "Ana Oliveira",
-    "createdAt": "2025-01-25T11:30:00Z",
-    "updatedAt": "2025-02-20T14:10:00Z",
-    "version": 1,
-    "highlights": [
-      "Tempo de carregamento reduzido de 4.5s para 1.2s",
-      "Identificação de 7 problemas de renderização",
-      "Melhoria de 65% na pontuação Lighthouse"
-    ],
-    "promptExample": "Analise este código React que está causando problemas de performance e sugira otimizações específicas...",
-    "result": "Código refatorado com memoização, lazy loading e otimização de renderização",
-    "tabs": {
-      "overview": {
-        "description": "Este case demonstra como utilizamos LLMs para analisar e otimizar a performance de uma aplicação React com problemas de lentidão. Através de análise de código profunda, foram identificados diversos problemas de renderização, carregamento e gestão de estado que impactavam negativamente a experiência do usuário."
-      },
-      "video": {
-        "url": "videos/case-003-demo.mp4",
-        "thumbnail": "thumbnails/case-003-video.jpg",
-        "highlights": [
-          "Comparação do antes e depois da otimização",
-          "Demonstração visual da melhoria de velocidade",
-          "Explicação das técnicas de otimização aplicadas",
-          "Análise das métricas de performance"
-        ],
-        "resources": [
-          {"name": "Relatório completo", "type": "blue-tag", "url": "#"},
-          {"name": "Ferramenta de diagnóstico", "type": "green-tag", "url": "#"},
-          {"name": "Guia de otimização", "type": "purple-tag", "url": "#"}
-        ]
-      },
-      "process": {
-        "steps": [
-          "Coleta de métricas de performance inicial (Lighthouse, React Profiler)",
-          "Análise do código fonte da aplicação pelo LLM",
-          "Identificação de padrões problemáticos e gargalos",
-          "Implementação das otimizações sugeridas",
-          "Monitoramento e validação das melhorias"
-        ]
-      },
-      "results": {
-        "before": [
-          "Tempo de carregamento inicial de 4.5 segundos",
-          "Renderizações desnecessárias em componentes aninhados",
-          "Bundles JavaScript de grande tamanho",
-          "Pontuação Lighthouse de performance em 45/100"
-        ],
-        "after": [
-          "Tempo de carregamento reduzido para 1.2 segundos",
-          "Componentes otimizados com React.memo e useCallback",
-          "Implementação de code-splitting e lazy loading",
-          "Pontuação Lighthouse de performance em 92/100"
-        ]
-      },
-      "lessons": {
-        "whatWorked": [
-          "Análise detalhada de código específico ao invés de generalidades",
-          "Foco em poucos problemas críticos de cada vez",
-          "Combinação de conhecimento técnico humano com sugestões do LLM",
-          "Medição constante do progresso"
-        ],
-        "improvementAreas": [
-          "Melhor definição do contexto arquitetural completo",
-          "Mais atenção às dependências e seus impactos",
-          "Consideração de estratégias de caching"
-        ],
-        "tips": [
-          "Forneça métricas específicas e objetivas ao LLM",
-          "Compartilhe trechos de código problemáticos em vez de descrições",
-          "Peça priorização dos problemas por impacto",
-          "Solicite explicações detalhadas de cada otimização sugerida",
-          "Valide as melhorias incrementalmente"
-        ]
-      }
+  "id": "case-003",
+  "title": "Otimização de Performance",
+  "category": "Performance",
+  "description": "Identificação e resolução de gargalos de performance em aplicação React",
+  "timeReduction": "80%",
+  "qualityImprovement": "90%",
+  "iconName": "Zap",
+  "color": "bg-yellow-100",
+  "author": "Ana Oliveira",
+  "createdAt": "2025-01-25T11:30:00Z",
+  "updatedAt": "2025-03-16T13:03:15.733Z",
+  "version": 1,
+  "highlights": [
+    "Tempo de carregamento reduzido de 4.5s para 1.2s",
+    "Identificação de 7 problemas de renderização",
+    "Melhoria de 65% na pontuação Lighthouse"
+  ],
+  "promptExample": "Analise este código React que está causando problemas de performance e sugira otimizações específicas...",
+  "result": "Código refatorado com memoização, lazy loading e otimização de renderização",
+  "tabs": {
+    "overview": {
+      "description": "Este case demonstra como utilizamos LLMs para analisar e otimizar a performance de uma aplicação React com problemas de lentidão. Através de análise de código profunda, foram identificados diversos problemas de renderização, carregamento e gestão de estado que impactavam negativamente a experiência do usuário."
+    },
+    "video": {
+      "url": "videos/case-003-demo.mp4",
+      "thumbnail": "thumbnails/case-003-video.jpg",
+      "highlights": [
+        "Comparação do antes e depois da otimização",
+        "Demonstração visual da melhoria de velocidade",
+        "Explicação das técnicas de otimização aplicadas",
+        "Análise das métricas de performance"
+      ],
+      "resources": [
+        {
+          "name": "Relatório completo",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Ferramenta de diagnóstico",
+          "type": "green-tag",
+          "url": "#"
+        },
+        {
+          "name": "Guia de otimização",
+          "type": "purple-tag",
+          "url": "#"
+        }
+      ]
+    },
+    "process": {
+      "steps": [
+        "Coleta de métricas de performance inicial (Lighthouse, React Profiler)",
+        "Análise do código fonte da aplicação pelo LLM",
+        "Identificação de padrões problemáticos e gargalos",
+        "Implementação das otimizações sugeridas",
+        "Monitoramento e validação das melhorias"
+      ]
+    },
+    "results": {
+      "before": [
+        "Tempo de carregamento inicial de 4.5 segundos",
+        "Renderizações desnecessárias em componentes aninhados",
+        "Bundles JavaScript de grande tamanho",
+        "Pontuação Lighthouse de performance em 45/100"
+      ],
+      "after": [
+        "Tempo de carregamento reduzido para 1.2 segundos",
+        "Componentes otimizados com React.memo e useCallback",
+        "Implementação de code-splitting e lazy loading",
+        "Pontuação Lighthouse de performance em 92/100"
+      ]
+    },
+    "lessons": {
+      "whatWorked": [
+        "Análise detalhada de código específico ao invés de generalidades",
+        "Foco em poucos problemas críticos de cada vez",
+        "Combinação de conhecimento técnico humano com sugestões do LLM",
+        "Medição constante do progresso"
+      ],
+      "improvementAreas": [
+        "Melhor definição do contexto arquitetural completo",
+        "Mais atenção às dependências e seus impactos",
+        "Consideração de estratégias de caching"
+      ],
+      "tips": [
+        "Forneça métricas específicas e objetivas ao LLM",
+        "Compartilhe trechos de código problemáticos em vez de descrições",
+        "Peça priorização dos problemas por impacto",
+        "Solicite explicações detalhadas de cada otimização sugerida",
+        "Valide as melhorias incrementalmente"
+      ]
     }
-  }
+  },
+  "summary": "Identificação e resolução de gargalos de performance em aplicação React"
+}
