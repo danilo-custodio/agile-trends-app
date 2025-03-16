@@ -117,51 +117,53 @@ class CasesAPI {
       }
   
       const data = await response.json();
-      const serverLastUpdated = data.lastUpdated || new Date().toISOString();
       const serverCases = data.cases || [];
+      const cachedCases = await casesDB.getCasesIndex();
       
-      // Se não há registro de última sincronização, considerar como atualização
-      if (!lastSyncTime) {
-        return { hasUpdates: true, serverCases, serverLastUpdated };
-      }
+      // Verificar se algum case foi alterado, comparando propriedades relevantes
+      let hasChanges = false;
       
-      // Verificar se a data de atualização do servidor é mais recente
-      const isNewer = new Date(serverLastUpdated) > new Date(lastSyncTime);
-      
-      // Mesmo que a data não seja mais recente, comparar o conteúdo
-      if (!isNewer) {
-        const cachedCases = await casesDB.getCasesIndex();
-        
-        // Verificar se o número de cases é diferente
-        if (serverCases.length !== cachedCases.length) {
-          return { hasUpdates: true, serverCases, serverLastUpdated };
-        }
-        
-        // Comparar IDs para detectar exclusões
-        const serverIds = new Set(serverCases.map(c => c.id));
-        const cachedIds = new Set(cachedCases.map(c => c.id));
-        const hasChangedIds = 
-          [...serverIds].some(id => !cachedIds.has(id)) || 
-          [...cachedIds].some(id => !serverIds.has(id));
-        
-        if (hasChangedIds) {
-          return { hasUpdates: true, serverCases, serverLastUpdated };
-        }
-        
-        // Comparar conteúdo de cada case para detectar atualizações
+      // Verificar se há diferenças na quantidade de cases
+      if (serverCases.length !== cachedCases.length) {
+        hasChanges = true;
+      } else {
+        // Para cada case no servidor, verificar se mudou
         for (const serverCase of serverCases) {
           const cachedCase = cachedCases.find(c => c.id === serverCase.id);
-          // Se o case foi atualizado depois da última sincronização
-          if (cachedCase && new Date(serverCase.updatedAt) > new Date(lastSyncTime)) {
-            return { hasUpdates: true, serverCases, serverLastUpdated };
+          
+          // Se o case não existe no cache local ou tem propriedades diferentes
+          if (!cachedCase) {
+            hasChanges = true;
+            break;
+          }
+          
+          // Verificar propriedades importantes para detectar alterações
+          // Comparar updatedAt (timestamp de atualização)
+          if (serverCase.updatedAt !== cachedCase.updatedAt) {
+            hasChanges = true;
+            break;
+          }
+          
+          // Comparar version (se existir)
+          if (serverCase.version !== cachedCase.version) {
+            hasChanges = true;
+            break;
+          }
+          
+          // Comparar outras propriedades críticas
+          if (serverCase.title !== cachedCase.title || 
+              serverCase.description !== cachedCase.description ||
+              serverCase.timeReduction !== cachedCase.timeReduction ||
+              serverCase.qualityImprovement !== cachedCase.qualityImprovement) {
+            hasChanges = true;
+            break;
           }
         }
       }
       
-      return { 
-        hasUpdates: isNewer, 
-        serverCases: isNewer ? serverCases : null,
-        serverLastUpdated
+      return {
+        hasUpdates: hasChanges,
+        serverCases: hasChanges ? serverCases : null
       };
     } catch (error) {
       console.error('Erro ao verificar atualizações:', error);
@@ -172,47 +174,64 @@ class CasesAPI {
   // Sincroniza todos os cases que precisam de atualização
   async syncAllCases() {
     try {
-      const { hasUpdates, serverCases } = await this.checkForUpdates();
+      const { hasUpdates, serverCases, serverLastUpdated } = await this.checkForUpdates();
       
       if (!hasUpdates || !serverCases) {
+        console.log('Não há atualizações necessárias');
         return {
           success: true,
-          message: 'Não há atualizações necessárias',
+          message: 'Dados já estão atualizados',
           updatedCases: []
         };
       }
       
-      // Limpar todos os dados locais
-      await this.clearCache();
+      console.log('Encontradas atualizações, sincronizando dados...');
       
-      // Salvar os novos dados do índice
+      // Limpar COMPLETAMENTE o cache do IndexedDB
+      await casesDB.clearAllCases();
+      
+      // Salvar o novo índice
       await casesDB.saveCasesIndex(serverCases);
       
-      // Salvar informação de última sincronização
+      // Atualizar o timestamp de sincronização
       await casesDB.saveSyncInfo({
         key: 'lastIndexSync',
-        timestamp: new Date().toISOString()
+        timestamp: serverLastUpdated || new Date().toISOString()
       });
       
-      // Carregar os detalhes de cada case
+      // Também limpar o cache do service worker para os arquivos JSON
+      if ('caches' in window) {
+        const cache = await caches.open(CACHE_NAME);
+        const keys = await cache.keys();
+        const jsonRequests = keys.filter(key => 
+          key.url.includes('/data/') && key.url.endsWith('.json')
+        );
+        
+        for (const request of jsonRequests) {
+          await cache.delete(request);
+        }
+      }
+      
+      // Carregar os dados completos de cada case
       for (const caseItem of serverCases) {
+        // Fazer com que o loadCase ignore o cache
         await this.loadCase(caseItem.id, true);
       }
       
       return {
         success: true,
-        message: `Dados atualizados com sucesso`,
+        message: 'Dados atualizados com sucesso',
         updatedCases: serverCases.map(c => c.id)
       };
     } catch (error) {
       console.error('Erro ao sincronizar cases:', error);
       return {
         success: false,
-        message: error.message,
-        updatedCases: []
+        message: error.message
       };
     }
   }
+
   async clearCache() {
     // Limpar os dados do IndexedDB
     await casesDB.clearAllCases();
