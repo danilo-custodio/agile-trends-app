@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-03-16T13:02:01.312Z",
+  "lastUpdated": "2025-03-16T13:03:16.469Z",
   "cases": [
     {
       "id": "case-001",
@@ -35,9 +35,8 @@
       "qualityImprovement": "90%",
       "iconName": "Zap",
       "color": "bg-yellow-100",
-      "summary": "Tempo de carregamento reduzido e melhoria significativa na pontuação Lighthouse",
-      "updatedAt": "2025-02-20T14:10:00Z",
-      "version": 1
+      "summary": "Identificação e resolução de gargalos de performance em aplicação React",
+      "updatedAt": "2025-03-16T13:03:15.733Z"
     },
     {
       "id": "case-004",
