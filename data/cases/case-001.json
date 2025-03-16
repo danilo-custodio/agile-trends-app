@@ -9,7 +9,7 @@
   "color": "bg-blue-100",
   "author": "Maria Silva Teste",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-03-16T13:02:05.002Z",
+  "updatedAt": "2025-03-16T13:03:29.091Z",
   "version": 1,
   "highlights": [
     "Eliminação de 8 reuniões de refinamento",
@@ -94,5 +94,5 @@
       ]
     }
   },
-  "summary": "Teste 1"
+  "summary": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude"
 }
