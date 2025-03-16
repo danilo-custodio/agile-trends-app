@@ -1,6 +1,9 @@
 // api.js - Funções para carregar dados JSON do GitHub Pages
 import casesDB from './db';
 
+// Definir o nome do cache usado pelo service worker
+const CACHE_NAME = 'cases-llm-v2';
+
 class CasesAPI {
   constructor() {
     // A URL base será o domínio onde está hospedado o site
@@ -174,7 +177,7 @@ class CasesAPI {
   // Sincroniza todos os cases que precisam de atualização
   async syncAllCases() {
     try {
-      const { hasUpdates, serverCases, serverLastUpdated } = await this.checkForUpdates();
+      const { hasUpdates, serverCases } = await this.checkForUpdates();
       
       if (!hasUpdates || !serverCases) {
         console.log('Não há atualizações necessárias');
@@ -196,19 +199,23 @@ class CasesAPI {
       // Atualizar o timestamp de sincronização
       await casesDB.saveSyncInfo({
         key: 'lastIndexSync',
-        timestamp: serverLastUpdated || new Date().toISOString()
+        timestamp: new Date().toISOString()
       });
       
       // Também limpar o cache do service worker para os arquivos JSON
       if ('caches' in window) {
-        const cache = await caches.open(CACHE_NAME);
-        const keys = await cache.keys();
-        const jsonRequests = keys.filter(key => 
-          key.url.includes('/data/') && key.url.endsWith('.json')
-        );
-        
-        for (const request of jsonRequests) {
-          await cache.delete(request);
+        try {
+          const cache = await caches.open(CACHE_NAME);
+          const keys = await cache.keys();
+          const jsonRequests = keys.filter(key => 
+            key.url.includes('/data/') && key.url.endsWith('.json')
+          );
+          
+          for (const request of jsonRequests) {
+            await cache.delete(request);
+          }
+        } catch (err) {
+          console.warn('Erro ao limpar cache do Service Worker:', err);
         }
       }
       
@@ -239,7 +246,7 @@ class CasesAPI {
     // Também pode limpar o cache do Service Worker para recursos relacionados
     if ('caches' in window) {
       try {
-        const cache = await caches.open('cases-llm-v2');
+        const cache = await caches.open(CACHE_NAME);
         
         // Obter todas as chaves de cache que contêm '/data/'
         const keys = await cache.keys();
