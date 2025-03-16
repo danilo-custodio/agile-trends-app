@@ -1,19 +1,18 @@
 {
   "version": 1,
-  "lastUpdated": "2025-03-16T16:21:18.550Z",
+  "lastUpdated": "2025-03-16T16:22:21.058Z",
   "cases": [
     {
       "id": "case-001",
-      "title": "Refinamento de Requisitos Ágeis",
+      "title": "Refinamento de Requisitos Ágeis TEste",
       "category": "Requisitos",
       "description": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude",
       "timeReduction": "70%",
       "qualityImprovement": "85%",
       "iconName": "Lightbulb",
       "color": "bg-blue-100",
-      "summary": "Eliminação de reuniões de refinamento e identificação de casos de borda não considerados",
-      "updatedAt": "2025-02-10T15:30:00Z",
-      "version": 1
+      "summary": "Como transformamos requisitos vagos em histórias de usuário detalhadas usando Claude",
+      "updatedAt": "2025-03-16T16:22:16.492Z"
     },
     {
       "id": "case-002",
