@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-03-16T15:58:04.310Z",
+  "lastUpdated": "2025-03-16T16:00:21.975Z",
   "cases": [
     {
       "id": "case-001",
@@ -52,18 +52,6 @@
       "summary": "Documentação completa gerada em horas com alta consistência entre código e documentação",
       "updatedAt": "2025-02-25T11:45:00Z",
       "version": 1
-    },
-    {
-      "id": "case-005",
-      "title": "Teste 1",
-      "category": "Teste 1",
-      "description": "Teste 1",
-      "timeReduction": "56%",
-      "qualityImprovement": "76%",
-      "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Teste 1",
-      "updatedAt": "2025-03-16T15:58:03.497Z"
     }
   ]
 }
