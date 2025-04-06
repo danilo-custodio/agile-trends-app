@@ -9,12 +9,12 @@
   "color": "bg-green-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-20T09:15:00Z",
-  "updatedAt": "2025-04-06T14:49:35.323Z",
+  "updatedAt": "2025-04-06T14:57:12.286Z",
   "version": 1,
   "highlights": [
-    "Criação de 5 endpoints em 1 dia (vs. 3 dias anteriormente)",
-    "Cobertura de testes de 92% desde o primeiro commit",
-    "Redução de bugs em produção em 40%"
+    "Redução no tempo de criação de um agente utilizando a api de assistentes da Open AI ",
+    "Códigos gerados pela IA melhores de acordo com instruções mais específicas",
+    "Menos erros gerados pela IA durante o processo de construção do agente"
   ],
   "promptExample": "Eu fiz uma funcao fora do agente e conseguiu gerar corretamente, agora parece que nao esta chamando a funcao async def analyze_interview(self, interview: Interview): do agente, o que pode ser?",
   "result": "Entendimento do erro rapidamente pelo diagnóstico do LLM",
