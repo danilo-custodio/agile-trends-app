@@ -9,13 +9,12 @@
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-04-06T14:35:18.859Z",
+  "updatedAt": "2025-04-06T14:37:49.255Z",
   "version": 1,
   "highlights": [
-    "Criação de 80% do código por IA",
-    "16 horas de trabalho para a criação do assistente",
-    "Aprendizado a API de assistentes da OpenAI",
-    "Estabelecimento de um template de HU de acordo com as melhores práticas"
+    "Eliminação de 8 reuniões de refinamento",
+    "Identificação de 12 casos de borda não considerados",
+    "Redução de retrabalho em 65%"
   ],
   "promptExample": "Melhore meu template de historia de usuario para o melhor que conseguir",
   "result": "Uma saida deterministica em termos de template para a histórias de usuário.",
@@ -24,7 +23,7 @@
   "productName": "MVP - History Builder",
   "tabs": {
     "overview": {
-      "description": "Este case demonstra como utilizamos LLMs para transformar requisitos de negócio vagos em histórias de usuário detalhadas e prontas para desenvolvimento. A abordagem eliminou várias rodadas de reuniões de refinamento e ajudou a identificar casos de borda frequentemente negligenciados."
+      "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software. \n\nO objetivo é a partir de uma entrevista com um cliente gerar uma HU e que essa HU possa ser validada pelo cliente na própria entrevista dimuindo consideravelmente o tempo de aprovação dos requisitos e consequentemente do inicio da implementação. "
     },
     "video": {
       "url": "videos/case-001-demo.mp4",
@@ -42,6 +41,11 @@
           "url": "#"
         },
         {
+          "name": "Link para teste",
+          "type": "green-tag",
+          "url": "#"
+        },
+        {
           "name": "Caso de uso completo",
           "type": "purple-tag",
           "url": "#"
@@ -52,20 +56,18 @@
       "steps": [
         "Definição clara do problema e objetivos desejados",
         "Criação de prompts estruturados com contexto adequado",
-        "Iteração e refinamento com base no feedback do LLM",
-        "Validação dos resultados com stakeholders",
-        "Implementação e medição de resultados"
+        "Iteração e refinamento com base no feedback do LLM"
       ]
     },
     "results": {
       "before": [
         "Processo manual demorado",
-        "Inconsistências entre documentos",
+        "Erros de implementação e complexidade de codigo",
         "Altos custos de retrabalho"
       ],
       "after": [
         "Processo rápido e consistente",
-        "Documentação sempre atualizada",
+        "Valor gerado em muito menos tempo ",
         "Qualidade superior desde o início"
       ]
     },
