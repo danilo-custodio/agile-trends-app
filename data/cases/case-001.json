@@ -9,12 +9,13 @@
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-04-06T14:27:54.452Z",
+  "updatedAt": "2025-04-06T14:32:46.686Z",
   "version": 1,
   "highlights": [
-    "Eliminação de 8 reuniões de refinamento",
-    "Identificação de 12 casos de borda não considerados",
-    "Redução de retrabalho em 65%"
+    "Criação de 80% do código por IA",
+    "16 horas de trabalho para a criação do assistente",
+    "Aprendizado a API de assistentes da OpenAI",
+    "Estabelecimento de um template de HU de acordo com as melhores práticas"
   ],
   "promptExample": "Melhore meu template de historia de usuario para o melhor que conseguir",
   "result": "Uma saida deterministica em termos de template para a histórias de usuário.",
