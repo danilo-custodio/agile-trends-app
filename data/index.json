@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-06T15:04:30.043Z",
+  "lastUpdated": "2025-04-06T15:06:41.811Z",
   "cases": [
     {
       "id": "case-001",
@@ -36,7 +36,7 @@
       "iconName": "Zap",
       "color": "bg-yellow-100",
       "summary": "Como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software.",
-      "updatedAt": "2025-04-06T15:04:28.217Z"
+      "updatedAt": "2025-04-06T15:06:41.214Z"
     },
     {
       "id": "case-004",
