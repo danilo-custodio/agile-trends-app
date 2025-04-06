@@ -9,12 +9,12 @@
   "color": "bg-yellow-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-25T11:30:00Z",
-  "updatedAt": "2025-04-06T15:04:28.217Z",
+  "updatedAt": "2025-04-06T15:06:41.214Z",
   "version": 1,
   "highlights": [
-    "Tempo de carregamento reduzido de 4.5s para 1.2s",
-    "Identificação de 7 problemas de renderização",
-    "Melhoria de 65% na pontuação Lighthouse"
+    "Utilizaçao de um orquestrador de agentes - Crew AI",
+    "Códigos mais estruturados gerados pelo LLM",
+    "Diminuição de interferência humana no código 90% do código criado pelo LLM"
   ],
   "promptExample": "pode separar o codigo em arquivos separados aqui no prompt ao inves de uma estrutura com tudo ?",
   "result": "Como estruturar melhor a saida de código do LLM",
