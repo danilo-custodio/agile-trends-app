@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-06T15:06:41.811Z",
+  "lastUpdated": "2025-04-06T15:15:35.632Z",
   "cases": [
     {
       "id": "case-001",
@@ -40,16 +40,15 @@
     },
     {
       "id": "case-004",
-      "title": "Automação de Documentação",
-      "category": "Documentação",
-      "description": "Criação automatizada de documentação técnica e de usuário a partir do código",
-      "timeReduction": "85%",
-      "qualityImprovement": "70%",
+      "title": "AI Advisory Sync",
+      "category": "Plataforma",
+      "description": "Um experimento para entender como a IA pode ajudar a criar agentes. O objetivo é criar uma plataforma No-code para criação de agentes de IA.",
+      "timeReduction": "97%",
+      "qualityImprovement": "50%",
       "iconName": "BarChart3",
       "color": "bg-purple-100",
-      "summary": "Documentação completa gerada em horas com alta consistência entre código e documentação",
-      "updatedAt": "2025-02-25T11:45:00Z",
-      "version": 1
+      "summary": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software",
+      "updatedAt": "2025-04-06T15:15:33.953Z"
     },
     {
       "id": "case-005",
