@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-06T14:32:48.241Z",
+  "lastUpdated": "2025-04-06T14:34:02.095Z",
   "cases": [
     {
       "id": "case-001",
@@ -12,7 +12,7 @@
       "iconName": "Lightbulb",
       "color": "bg-blue-100",
       "summary": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software",
-      "updatedAt": "2025-04-06T14:32:46.686Z"
+      "updatedAt": "2025-04-06T14:34:00.530Z"
     },
     {
       "id": "case-002",
