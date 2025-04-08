@@ -9,7 +9,7 @@
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-04-06T14:37:49.255Z",
+  "updatedAt": "2025-04-08T21:10:03.176Z",
   "version": 1,
   "highlights": [
     "Eliminação de 8 reuniões de refinamento",
@@ -26,8 +26,8 @@
       "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software. \n\nO objetivo é a partir de uma entrevista com um cliente gerar uma HU e que essa HU possa ser validada pelo cliente na própria entrevista dimuindo consideravelmente o tempo de aprovação dos requisitos e consequentemente do inicio da implementação. "
     },
     "video": {
-      "url": "videos/case-001-demo.mp4",
-      "thumbnail": "thumbnails/case-001-video.jpg",
+      "url": "https://youtu.be/WYlKyS79dbg",
+      "thumbnail": "",
       "highlights": [
         "Demonstração das principais funcionalidades",
         "Interface e experiência do usuário",
