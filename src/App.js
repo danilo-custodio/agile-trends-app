@@ -26,6 +26,7 @@ const CasesApp = () => {
   const [error, setError] = useState(null);
   const [offlineMode, setOfflineMode] = useState(!navigator.onLine);
   const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [showVideoModal, setShowVideoModal] = useState(false);
   
 
   // Verificar status de conexão
@@ -339,7 +340,11 @@ const CasesApp = () => {
                 <h2 className="content-title">Demo do Produto Final</h2>
                 <p className="content-subtitle">Veja em ação o produto digital que foi desenvolvido</p>
                 <div className="video-container">
-                  <div className="video-placeholder">
+                  <div 
+                    className="video-placeholder"
+                    onClick={() => setShowVideoModal(true)}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <div className="play-button">
                       <div className="play-icon"></div>
                     </div>
@@ -533,6 +538,38 @@ const CasesApp = () => {
       </header>
       
       {selectedCaseId ? renderCaseDetail() : renderCaseList()}
+
+      {showVideoModal && (
+        <div 
+          className="video-modal"
+          onClick={(e) => {
+            // Fechar o modal quando clicar fora do conteúdo
+            if (e.target.className === 'video-modal') {
+              setShowVideoModal(false);
+            }
+          }}
+        >
+          <div className="modal-content">
+            <button 
+              className="close-modal" 
+              onClick={() => setShowVideoModal(false)}
+            >
+              &times;
+            </button>
+            <iframe 
+              width="100%" 
+              height="480" 
+              src={caseDetails?.tabs?.video?.url ? 
+                (caseDetails.tabs.video.url.replace('youtu.be/', 'youtube.com/embed/').replace('youtube.com/watch?v=', 'youtube.com/embed/') + 
+                 (caseDetails.tabs.video.url.includes('?') ? '&' : '?') + 'autoplay=1&mute=1')
+                : ''}
+              style={{ border: 'none' }} // Substituir frameBorder por style
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
       
       <InstallPWA />
     </div>

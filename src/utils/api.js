@@ -6,9 +6,17 @@ const CACHE_NAME = 'cases-llm-v2';
 
 class CasesAPI {
   constructor() {
-    // A URL base será o domínio onde está hospedado o site
-    this.baseUrl = process.env.PUBLIC_URL || '';
+    // Determinar a URL base correta
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      // Em desenvolvimento local, acesse o GitHub Pages para os dados
+      this.baseUrl = 'https://danilo-custodio.github.io/agile-trends-app';
+    } else {
+      // Em produção (GitHub Pages), use o caminho relativo
+      this.baseUrl = '';
+    }
+    
     this.dataPath = '/data';
+    console.log(`Base URL configurada como: ${this.baseUrl}`);
   }
 
   // Carrega o índice de cases do servidor ou do cache
@@ -25,6 +33,7 @@ class CasesAPI {
 
       // Se forçar refresh ou não tiver cache, buscar do servidor
       console.log('Buscando índice de casos do servidor...');
+      console.log(`Tentando carregar de: ${this.baseUrl}${this.dataPath}/index.json`);
       const response = await fetch(`${this.baseUrl}${this.dataPath}/index.json`);
       
       if (!response.ok) {
