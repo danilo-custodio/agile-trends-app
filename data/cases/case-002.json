@@ -1,6 +1,6 @@
 {
   "id": "case-002",
-  "title": "MVP - React Frontend Builder",
+  "title": "React Frontend Builder",
   "category": "Desenvolvimento",
   "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software. O objetivo é a partir de uma entrevista com um cliente gerar um front end em React.",
   "timeReduction": "80%",
@@ -9,7 +9,7 @@
   "color": "bg-green-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-20T09:15:00Z",
-  "updatedAt": "2025-04-09T02:26:50.250Z",
+  "updatedAt": "2025-04-09T14:25:06.662Z",
   "version": 1,
   "highlights": [
     "Redução no tempo de criação de um agente utilizando a api de assistentes da Open AI ",
@@ -20,30 +20,24 @@
   "result": "Entendimento do erro rapidamente pelo diagnóstico do LLM",
   "tabs": {
     "overview": {
-      "description": "Este case demonstra como utilizamos LLMs para acelerar o desenvolvimento de APIs RESTful com código de alta qualidade e testes automatizados. O tempo de desenvolvimento foi reduzido significativamente e a qualidade do código aumentou, com alta cobertura de testes desde o início."
+      "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software. O objetivo é a partir de uma transcrição  entrevista com um cliente gerar um front end em React. Depois de gerado pode solicitar atualizações de melhoria."
     },
     "video": {
       "url": "https://youtu.be/VjA87ZkdCBQ",
       "thumbnail": "thumbnails/case-002-video.jpg",
       "highlights": [
         "Demonstração do processo de geração de código",
-        "Estrutura da API gerada e organização do código",
-        "Integração dos testes automatizados",
-        "Comparação com o processo de desenvolvimento tradicional"
+        "Possibilidades de download de vizualizaçãod o código online",
+        "Solicitação de novos campos "
       ],
       "resources": [
-        {
-          "name": "Repositório GitHub",
-          "type": "blue-tag",
-          "url": "#"
-        },
         {
           "name": "Demo online",
           "type": "green-tag",
           "url": "#"
         },
         {
-          "name": "Documentação da API",
+          "name": "Ferramenta online",
           "type": "purple-tag",
           "url": "#"
         }
@@ -54,7 +48,6 @@
         "Definição detalhada dos endpoints, modelos de dados e regras de negócio",
         "Criação do prompt com especificações e padrões de código",
         "Geração do código base da API com estrutura de projeto",
-        "Solicitação de testes unitários e de integração",
         "Revisão e refinamento com ajustes de performance"
       ]
     },
@@ -62,20 +55,16 @@
       "before": [
         "Desenvolvimento manual e repetitivo",
         "Testes adicionados após implementação",
-        "Cobertura de testes inicial baixa (~50%)",
         "Maior incidência de bugs em produção"
       ],
       "after": [
         "Desenvolvimento rápido e padronizado",
-        "Testes criados simultaneamente ao código",
-        "Alta cobertura de testes (>90%) desde o início",
-        "Redução de bugs em produção em 40%"
+        "Testes criados simultaneamente ao código"
       ]
     },
     "lessons": {
       "whatWorked": [
         "Fornecer especificações detalhadas no prompt",
-        "Pedir explicitamente testes para cada componente",
         "Criar uma estrutura de código modular e extensível",
         "Estabelecer padrões de validação e tratamento de erros"
       ],
@@ -87,8 +76,6 @@
       "tips": [
         "Defina claramente os endpoints, métodos HTTP e formatos de resposta",
         "Especifique o padrão de arquitetura desejado (MVC, Clean, etc.)",
-        "Solicite documentação OpenAPI/Swagger junto com o código",
-        "Peça testes que cubram casos de erro e exceções",
         "Mantenha o escopo bem definido por iteração"
       ]
     }
