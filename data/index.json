@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:10:14.505Z",
+  "lastUpdated": "2025-04-09T03:12:51.691Z",
   "cases": [
     {
       "id": "case-001",
@@ -121,6 +121,18 @@
       "color": "bg-blue-100",
       "summary": "Search Agent",
       "updatedAt": "2025-04-09T03:10:13.022Z"
+    },
+    {
+      "id": "case-011",
+      "title": "Dinamic Statistics",
+      "category": "Agente Funcional",
+      "description": "Dinamic Statistics",
+      "timeReduction": "10%",
+      "qualityImprovement": "10%",
+      "iconName": "Lightbulb",
+      "color": "bg-blue-100",
+      "summary": "Dinamic Statistics",
+      "updatedAt": "2025-04-09T03:12:50.621Z"
     }
   ]
 }
