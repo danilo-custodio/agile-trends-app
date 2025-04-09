@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://danilo-custodio.github.io/agile-trends-app/static/css/main.113fc0b4.css",
-    "main.js": "https://danilo-custodio.github.io/agile-trends-app/static/js/main.5ebcff2f.js",
+    "main.css": "https://danilo-custodio.github.io/agile-trends-app/static/css/main.9d33344b.css",
+    "main.js": "https://danilo-custodio.github.io/agile-trends-app/static/js/main.e8309230.js",
     "index.html": "https://danilo-custodio.github.io/agile-trends-app/index.html",
-    "main.113fc0b4.css.map": "https://danilo-custodio.github.io/agile-trends-app/static/css/main.113fc0b4.css.map",
-    "main.5ebcff2f.js.map": "https://danilo-custodio.github.io/agile-trends-app/static/js/main.5ebcff2f.js.map"
+    "main.9d33344b.css.map": "https://danilo-custodio.github.io/agile-trends-app/static/css/main.9d33344b.css.map",
+    "main.e8309230.js.map": "https://danilo-custodio.github.io/agile-trends-app/static/js/main.e8309230.js.map"
   },
   "entrypoints": [
-    "static/css/main.113fc0b4.css",
-    "static/js/main.5ebcff2f.js"
+    "static/css/main.9d33344b.css",
+    "static/js/main.e8309230.js"
   ]
 }
