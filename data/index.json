@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:05:06.178Z",
+  "lastUpdated": "2025-04-09T03:10:14.505Z",
   "cases": [
     {
       "id": "case-001",
@@ -109,6 +109,18 @@
       "color": "bg-blue-100",
       "summary": "Java Unit Test Generator",
       "updatedAt": "2025-04-09T03:05:04.869Z"
+    },
+    {
+      "id": "case-010",
+      "title": "Search Agent",
+      "category": "Agente Funcional",
+      "description": "Search Agent",
+      "timeReduction": "10%",
+      "qualityImprovement": "10%",
+      "iconName": "Lightbulb",
+      "color": "bg-blue-100",
+      "summary": "Search Agent",
+      "updatedAt": "2025-04-09T03:10:13.022Z"
     }
   ]
 }
