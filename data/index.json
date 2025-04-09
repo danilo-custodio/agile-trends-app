@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:26:11.769Z",
+  "lastUpdated": "2025-04-09T03:33:37.074Z",
   "cases": [
     {
       "id": "case-001",
@@ -58,9 +58,9 @@
       "timeReduction": "11%",
       "qualityImprovement": "11%",
       "iconName": "Lightbulb",
-      "color": "bg-blue-100",
+      "color": "bg-red-100",
       "summary": "Teste 1",
-      "updatedAt": "2025-04-09T02:50:00.283Z"
+      "updatedAt": "2025-04-09T03:33:35.859Z"
     },
     {
       "id": "case-006",
