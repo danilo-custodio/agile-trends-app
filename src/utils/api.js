@@ -12,7 +12,7 @@ class CasesAPI {
       this.baseUrl = 'https://danilo-custodio.github.io/agile-trends-app';
     } else {
       // Em produção (GitHub Pages), use o caminho relativo
-      this.baseUrl = '';
+      this.baseUrl = process.env.PUBLIC_URL || '';
     }
     
     this.dataPath = '/data';
