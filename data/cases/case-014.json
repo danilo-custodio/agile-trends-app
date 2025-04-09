@@ -2,23 +2,23 @@
   "id": "case-014",
   "title": "Cases Manager",
   "category": "Sistema",
-  "description": "Cases Manager",
-  "timeReduction": "10%",
-  "qualityImprovement": "10%",
+  "description": "Case Manager - Sistema para cadastro de experimento com sistemas multiagentes",
+  "timeReduction": "90%",
+  "qualityImprovement": "50%",
   "iconName": "Lightbulb",
   "color": "bg-green-100",
   "author": "Danilo Custódio",
-  "summary": "Cases Manager",
-  "promptExample": "",
-  "result": "",
+  "summary": "Case Manager - Sistema para cadastro de experimento com sistemas multiagentes",
+  "promptExample": "Olá! Estou desenvolvendo um PWA chamado \"Cases de Co-criação com LLMs\" que exibe casos de uso de LLMs. Já tenho a parte de visualização funcionando, com os dados sendo armazenados em arquivos JSON no GitHub Pages e sincronizados via IndexedDB para funcionalidade offline. Criei  uma aplicação complementar para facilitar o cadastro e gerenciamento desses cases. Atualmente, preciso editar manualmente os arquivos JSON, o que é propenso a erros. Os cases têm a seguinte estrutura: * Informações básicas (id, título, descrição, categoria, etc.) * Métricas (redução de tempo, melhoria de qualidade) * Destaques (lista de pontos principais) * Abas com conteúdo detalhado (visão geral, vídeo, processo, resultados, lições) Gostaria de desenvolver uma interface administrativa simples e gratuita que: 1. Permita criar, editar e excluir cases 2. Valide os dados inseridos (campos obrigatórios, formatos) 3. Gere arquivos JSON prontos para serem adicionados ao repositório 4. Idealmente, se integre ao GitHub para fazer commits automáticos . Estou com problemas na integração com o github, tenho essa pagina de settings:",
+  "result": "Sistema para cadastrar informações dos cases",
   "videoLength": "",
   "videoViews": "",
   "productName": "Cases Manager",
   "createdAt": "2025-04-09T03:20:30.065Z",
-  "updatedAt": "2025-04-09T14:41:00.858Z",
+  "updatedAt": "2025-04-09T15:43:37.050Z",
   "version": 1,
   "highlights": [
-    ""
+    "GIt hub publico - https://github.com/danilo-custodio/llm-cases-admin"
   ],
   "tabs": {
     "overview": {
