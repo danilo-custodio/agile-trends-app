@@ -2,33 +2,37 @@
   "id": "case-013",
   "title": "Agile Trends APP",
   "category": "Aplicativo",
-  "description": "Agile Trends APP",
-  "timeReduction": "10%",
-  "qualityImprovement": "10%",
+  "description": "Agile Trends APP - Catálogo de experimentos com sistemas multiagentes para minha palestra no agile trends",
+  "timeReduction": "90%",
+  "qualityImprovement": "50%",
   "iconName": "Lightbulb",
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
-  "summary": "Agile Trends APP",
-  "promptExample": "",
-  "result": "",
+  "summary": "Agile Trends APP - Catálogo de experimentos com sistemas multiagentes para minha palestra no agile trends",
+  "promptExample": "Vou palestrar no agile trends o maior evento de agilidade da america latina. Para complementar a minha palestra gostaria de criar um aplicativo com o objetivo de mostrar as minhas experiência que quero mostrar na minha palestra. Inclusive a criação desse aplicativo é uma experiência de como utilizar a IA para potencializar o desenvolvivimento e potencializar negócios> Eu tenho uma idéia de como poderia ser o meu aplicativo, mas gostaria de escutar um pouco vc antes de decidir, quais são as suas sugestões e o porque?",
+  "result": "App do catalogos de experimento para o agile trends",
   "videoLength": "",
   "videoViews": "",
   "productName": "Agile Trends APP",
   "createdAt": "2025-04-09T03:16:44.273Z",
-  "updatedAt": "2025-04-09T04:08:09.087Z",
+  "updatedAt": "2025-04-09T15:37:52.798Z",
   "version": 1,
   "highlights": [
-    ""
+    "App PWA ",
+    "Funcionamento offline",
+    "Integração com gh-pages",
+    "Git hub pulico - https://github.com/danilo-custodio/agile-trends-app"
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Agile Trends APP - Catálogo de experimentos com sistemas multiagentes para minha palestra no agile trends"
     },
     "video": {
       "url": "https://youtu.be/5sQ61Cu22rI",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Navegação nos cases ",
+        "Navegação nas abas "
       ],
       "resources": []
     },
