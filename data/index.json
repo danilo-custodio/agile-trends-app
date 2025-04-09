@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T12:23:19.038Z",
+  "lastUpdated": "2025-04-09T12:33:27.466Z",
   "cases": [
     {
       "id": "case-001",
@@ -72,7 +72,7 @@
       "iconName": "Users",
       "color": "bg-yellow-100",
       "summary": "Criação de um sistema multiagentes para orientações para dar feedbacks para liderados. ",
-      "updatedAt": "2025-04-09T12:23:17.882Z"
+      "updatedAt": "2025-04-09T12:33:26.449Z"
     },
     {
       "id": "case-009",
