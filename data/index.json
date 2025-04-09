@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T02:28:27.749Z",
+  "lastUpdated": "2025-04-09T02:31:11.794Z",
   "cases": [
     {
       "id": "case-001",
@@ -40,7 +40,7 @@
     },
     {
       "id": "case-004",
-      "title": "AI Advisory Sync",
+      "title": "MVP - AI Advisory Sync",
       "category": "Plataforma",
       "description": "Um experimento para entender como a IA pode ajudar a criar agentes. O objetivo é criar uma plataforma No-code para criação de agentes de IA.",
       "timeReduction": "97%",
@@ -48,7 +48,7 @@
       "iconName": "BarChart3",
       "color": "bg-purple-100",
       "summary": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software",
-      "updatedAt": "2025-04-06T15:15:33.953Z"
+      "updatedAt": "2025-04-09T02:31:10.913Z"
     },
     {
       "id": "case-005",
