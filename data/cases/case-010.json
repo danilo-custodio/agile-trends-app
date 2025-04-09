@@ -6,7 +6,7 @@
   "timeReduction": "10%",
   "qualityImprovement": "10%",
   "iconName": "Lightbulb",
-  "color": "bg-green-100",
+  "color": "bg-yellow-100",
   "author": "Danilo Custódio",
   "summary": "A funcionalidade é uma busca de sistemas multiagentes baseado em objetivos do usuário.",
   "promptExample": "",
@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "Search Agent",
   "createdAt": "2025-04-09T03:10:13.022Z",
-  "updatedAt": "2025-04-09T13:17:21.709Z",
+  "updatedAt": "2025-04-09T14:11:45.438Z",
   "version": 1,
   "highlights": [
     "Busca feita por um agente de IA",
