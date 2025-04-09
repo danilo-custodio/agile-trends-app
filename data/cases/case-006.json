@@ -2,33 +2,38 @@
   "id": "case-006",
   "title": "Feedback Helper",
   "category": "Liderança",
-  "description": "Case da criação de um sistema multiagentes para orientações para dar feedbacks para liderados.",
-  "timeReduction": "80%",
-  "qualityImprovement": "69%",
-  "iconName": "Lightbulb",
-  "color": "bg-red-100",
+  "description": "Case da criação de um sistema multiagentes para orientações para dar feedbacks para liderados. Os feedbacks devem ser estruturados, claros e propositivos afim de gerar aprendizado e engajamento. ",
+  "timeReduction": "70%",
+  "qualityImprovement": "80%",
+  "iconName": "Users",
+  "color": "bg-yellow-100",
   "author": "Danilo Custódio",
-  "summary": "Teste",
-  "promptExample": "",
-  "result": "",
+  "summary": "Criação de um sistema multiagentes para orientações para dar feedbacks para liderados. ",
+  "promptExample": "Esse sistema multiagente foi criado dentro da plataforma através das funcionalidades no code.",
+  "result": "Feedback esrtuturado com um plano de ação bem definido ",
   "videoLength": "",
   "videoViews": "",
   "productName": "Feedback Helper",
   "createdAt": "2025-04-06T15:19:41.058Z",
-  "updatedAt": "2025-04-09T03:41:05.722Z",
+  "updatedAt": "2025-04-09T12:23:17.882Z",
   "version": 1,
   "highlights": [
-    ""
+    "Sistema multiagentes criado utilizando a ferramenta no-code da plataforma",
+    "Sem necessidade de programação",
+    "Qualidade do feedback gerado ",
+    "Velocidade para estruturar o feedback "
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Um sistema multiagentes que a partir de um contexto de trabalho de um colaborador sugere um feedback estruturado e eficaz. Esse feedback tem o objetivo de orientar, reforçar, engajar e motivar o colaborador. Ele estabelece uma plano claro de orientações. "
     },
     "video": {
-      "url": "",
+      "url": "https://youtu.be/SnadmFbHDfE",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Entrada simples e funcional",
+        "Parecer de feedback completo e detalhado",
+        "Tempo para a gerac"
       ],
       "resources": []
     },
