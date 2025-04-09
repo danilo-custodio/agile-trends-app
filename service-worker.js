@@ -4,13 +4,13 @@ const BASE_PATH = self.location.pathname.replace('service-worker.js', '');
 
 const APP_SHELL = [
   `${BASE_PATH}index.html`,
-  `${BASE_PATH}static/js/main.chunk.js`,
-  `${BASE_PATH}static/css/main.chunk.css`,
   `${BASE_PATH}manifest.json`,
   `${BASE_PATH}logo192.png`,
   `${BASE_PATH}logo512.png`,
   `${BASE_PATH}offline.html`,
-  `${BASE_PATH}data/index.json`
+  `${BASE_PATH}data/index.json`,
+  `${BASE_PATH}static/css/main.*.css`,
+  `${BASE_PATH}static/js/main.*.js`
 ];
 
 self.addEventListener('install', event => {
