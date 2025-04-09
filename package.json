@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preview": "http-server ./build -p 8080",
-    "deploy": "node node_modules/gh-pages/bin/gh-pages.js -d build",
+    "deploy1": "node node_modules/gh-pages/bin/gh-pages.js -d build",
     "deploy:netlify": "npm run build &&  netlify deploy --prod"
   },
   "eslintConfig": {
