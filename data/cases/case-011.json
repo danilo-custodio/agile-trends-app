@@ -1,59 +1,89 @@
 {
   "id": "case-011",
-  "title": "Dinamic Statistics",
+  "title": "BI 3.0",
   "category": "Agente Funcional",
-  "description": "Dinamic Statistics",
-  "timeReduction": "10%",
-  "qualityImprovement": "10%",
+  "description": "Criação de um sistemas multiagentes onde usuário informa a estatística que ele gostaria de saber naquele momento e o sistema responde a estatística e a implicações dela. ",
+  "timeReduction": "90%",
+  "qualityImprovement": "50%",
   "iconName": "Lightbulb",
-  "color": "bg-blue-100",
+  "color": "bg-purple-100",
   "author": "Danilo Custódio ",
-  "summary": "Dinamic Statistics",
-  "promptExample": "",
-  "result": "",
+  "summary": "Criação de um sistemas multiagentes onde usuário informa a estatística que ele gostaria de saber naquele momento.",
+  "promptExample": "Não quero ficar criando relatórios, como eu plugo um BI no meu projeto python. Queria uma opnião ao invés de fazer um BI posso utilizar uma IA para trabalhar com os dados ao inves do BI?",
+  "result": "Sistema multiagentes que retorna uma estatística quando solicitado",
   "videoLength": "",
   "videoViews": "",
-  "productName": "Dinamic Statistics",
+  "productName": "BI 3.0",
   "createdAt": "2025-04-09T03:12:50.621Z",
-  "updatedAt": "2025-04-09T03:12:50.621Z",
+  "updatedAt": "2025-04-09T13:35:13.072Z",
   "version": 1,
   "highlights": [
-    ""
+    "Passagem de contexto com uma base complexa",
+    "Gerenciamento de token refinado",
+    "Estatística detalhada e análisada"
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Sistemas multiagentes onde usuário informa a estatística que ele gostaria de saber naquele momento e o sistema responde a estatística e a implicações dela. "
     },
     "video": {
-      "url": "",
+      "url": "https://youtu.be/cY5-ElcXq9U",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Solicitação estatistica ",
+        "Reposta da estatística com a análise",
+        "Área de insigths inteligentes onde a IA define o que é relevante e informa"
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Ferramenta online",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Decisão da IA",
+          "type": "green-tag",
+          "url": "#"
+        },
+        {
+          "name": "LLM conectado em tempo real",
+          "type": "purple-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Mapear os dados relevantes para as estatisticas ",
+        "Repassar o contexto para a IA",
+        "A IA calcula as estatisticas ",
+        "O sistema multiagentes apresente a estatistica com a analise"
       ]
     },
     "results": {
       "before": [
-        ""
+        "Paineis de BI fixos ",
+        "Filtros pré-definidos ",
+        "Programação SQL"
       ],
       "after": [
-        ""
+        "O usuário diz a estatística que quer naquele momento",
+        "Funcionalidade realizada por um sistema multiagentes",
+        "Insigths gerados baseado em decisão da IA do que é mais relevante"
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Estratificação das infomações passadas à LLM",
+        "Criar uma representação dos dados adequada para o LLM"
       ],
       "improvementAreas": [
-        ""
+        "Retirar informações que não são relevantes",
+        "Diminuir o tamanho do contexto"
       ],
       "tips": [
-        ""
+        "Peça ao LLM para criar a melhor base que ele consegue interpretar",
+        "Comece com bases menores e depois vá expandindo"
       ]
     }
   }
