@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:41:06.612Z",
+  "lastUpdated": "2025-04-09T04:02:11.564Z",
   "cases": [
     {
       "id": "case-001",
@@ -60,7 +60,7 @@
       "iconName": "Lightbulb",
       "color": "bg-red-100",
       "summary": "Teste 1",
-      "updatedAt": "2025-04-09T03:33:35.859Z"
+      "updatedAt": "2025-04-09T04:02:10.782Z"
     },
     {
       "id": "case-006",
