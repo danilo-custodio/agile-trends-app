@@ -1,17 +1,16 @@
 // service-worker.js
 const CACHE_NAME = 'cases-llm-v2';
+const BASE_URL = self.location.pathname.replace('service-worker.js', '');
 const APP_SHELL = [
   '/',
   '/index.html',
   '/static/js/main.chunk.js',
-  '/static/js/0.chunk.js',
-  '/static/js/bundle.js',
   '/static/css/main.chunk.css',
   '/manifest.json',
   '/logo192.png',
   '/logo512.png',
   '/offline.html',
-  '/data/index.json'  // Adicionamos o arquivo de índice para pré-cachear
+  '/data/index.json'
 ];
 
 // Instalação do service worker e cache de recursos
