@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T13:38:09.495Z",
+  "lastUpdated": "2025-04-09T14:10:38.200Z",
   "cases": [
     {
       "id": "case-001",
@@ -114,13 +114,13 @@
       "id": "case-012",
       "title": "Reinforcement Learning Agent",
       "category": "Agente Funcional",
-      "description": "Reinforcement Learning Agent",
-      "timeReduction": "10%",
-      "qualityImprovement": "10%",
+      "description": "Sistemas multiagentes onde usuário fornece um feedback e na próxima solicitação a resposta será dada levando em consideração aquele feedback dado. ",
+      "timeReduction": "90%",
+      "qualityImprovement": "50%",
       "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Reinforcement Learning Agent",
-      "updatedAt": "2025-04-09T03:14:21.446Z"
+      "color": "bg-gray-100",
+      "summary": "Sistemas multiagentes onde usuário fornece um feedback e na próxima solicitação a resposta será dada levando em consideração aquele feedback dado. ",
+      "updatedAt": "2025-04-09T14:10:36.640Z"
     },
     {
       "id": "case-013",
