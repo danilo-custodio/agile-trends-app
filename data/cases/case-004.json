@@ -1,6 +1,6 @@
 {
   "id": "case-004",
-  "title": "AI Advisory Sync",
+  "title": "MVP - AI Advisory Sync",
   "category": "Plataforma",
   "description": "Um experimento para entender como a IA pode ajudar a criar agentes. O objetivo é criar uma plataforma No-code para criação de agentes de IA.",
   "timeReduction": "97%",
@@ -9,7 +9,7 @@
   "color": "bg-purple-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-02-05T13:45:00Z",
-  "updatedAt": "2025-04-06T15:15:33.953Z",
+  "updatedAt": "2025-04-09T02:31:10.913Z",
   "version": 3,
   "highlights": [
     "Documentação completa gerada em 2 horas (vs. 2 dias)",
