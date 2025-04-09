@@ -1,8 +1,8 @@
 {
   "id": "case-007",
-  "title": "Java Fix Crew",
-  "category": "Desenvolvimento",
-  "description": "Java Fix Crew",
+  "title": "User History Builder",
+  "category": "Requisitos",
+  "description": "User History Builder",
   "timeReduction": "10%",
   "qualityImprovement": "10%",
   "iconName": "Lightbulb",
@@ -13,9 +13,9 @@
   "result": "",
   "videoLength": "",
   "videoViews": "",
-  "productName": "Java Fix Crew",
+  "productName": "User History Builder",
   "createdAt": "2025-04-09T02:55:36.360Z",
-  "updatedAt": "2025-04-09T02:55:36.360Z",
+  "updatedAt": "2025-04-09T03:00:51.935Z",
   "version": 1,
   "highlights": [
     ""
