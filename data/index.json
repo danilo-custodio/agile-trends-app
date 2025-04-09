@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T13:19:18.297Z",
+  "lastUpdated": "2025-04-09T13:35:14.244Z",
   "cases": [
     {
       "id": "case-001",
@@ -100,15 +100,15 @@
     },
     {
       "id": "case-011",
-      "title": "Dinamic Statistics",
+      "title": "BI 3.0",
       "category": "Agente Funcional",
-      "description": "Dinamic Statistics",
-      "timeReduction": "10%",
-      "qualityImprovement": "10%",
+      "description": "Criação de um sistemas multiagentes onde usuário informa a estatística que ele gostaria de saber naquele momento e o sistema responde a estatística e a implicações dela. ",
+      "timeReduction": "90%",
+      "qualityImprovement": "50%",
       "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Dinamic Statistics",
-      "updatedAt": "2025-04-09T03:12:50.621Z"
+      "color": "bg-purple-100",
+      "summary": "Criação de um sistemas multiagentes onde usuário informa a estatística que ele gostaria de saber naquele momento.",
+      "updatedAt": "2025-04-09T13:35:13.072Z"
     },
     {
       "id": "case-012",
