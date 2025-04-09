@@ -2,58 +2,87 @@
   "id": "case-009",
   "title": "Java Unit Test Generator",
   "category": "Teste",
-  "description": "Java Unit Test Generator",
-  "timeReduction": "10%",
-  "qualityImprovement": "10%",
+  "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o SDLC. O objetivo é a partir de zip com código java sejam construídos testes unitários para todas as classes e métodos. ",
+  "timeReduction": "95%",
+  "qualityImprovement": "30%",
   "iconName": "Lightbulb",
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
-  "summary": "Java Unit Test Generator",
-  "promptExample": "",
-  "result": "",
+  "summary": "a partir de zip com código java sejam construídos testes unitários para todas as classes e métodos. ",
+  "promptExample": "Funcionou, agora, que pegar essas analises e utilizar como imput para gerar efetivamente as classes de teste. Quando vc sugeriu , vc sugeriu em um outra rota, mas pra mim faz sentido ter uma rota que primeiro utiliza o agente de analise e depoi utiliza o agente de geracao e depois o agente de integração. Como você vê isso, vamos discutir antes de iniciar as implementações.",
+  "result": "Agentes mais eficazes. Ter claro o seu objetivo e pedir para a IA te falar o que ela vai construir aumenta a chance de sucesso. ",
   "videoLength": "",
   "videoViews": "",
   "productName": "Java Unit Test Generator",
   "createdAt": "2025-04-09T03:05:04.869Z",
-  "updatedAt": "2025-04-09T04:04:16.023Z",
+  "updatedAt": "2025-04-09T12:53:08.290Z",
   "version": 1,
   "highlights": [
-    ""
+    "Processamento assíncrono ",
+    "Grande número de execuções ",
+    "Recuperação de falhas ",
+    "Resultados intermediários"
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Gerar testes unitários em java a partir de um Zip. O sistema identifica as tecnolgias do projeto e gera os testes unitários para essa tecnolgia. Entende e mapeia a estrtura para passar como contexto e gerar testes com uma melhor qualidade. "
     },
     "video": {
       "url": "https://www.youtube.com/watch?v=Ln99ojdxjXg",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Interface de entrada específica",
+        "Log de execução detalhado ",
+        "Atualização do status de execução de forma assíncrona"
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Ferramenta online ",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Geração de logs em tempo real",
+          "type": "green-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Entendimento e mapeamento da estrutura",
+        "Entendimento das tecnologias envolvidas ",
+        "Criação dos testes unitarios por classes ",
+        "Revisão baseado no aprendizado inicial "
       ]
     },
     "results": {
       "before": [
+        "Projetos com baixa cobertura de testes ",
+        "Poucos cenários mapeados",
+        "Grande esforço  para a criação dos testes ",
         ""
       ],
       "after": [
-        ""
+        "Aumento considerável na cobertura de testes ",
+        "Maior número de cenários testados",
+        "Diminuição considerável no tempo e custo de criação de testes "
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Pedir para gerar código separados",
+        "Pedir para gerar códigos o mais simples possível para um determinado objetivo",
+        "Discutir soluções alternativas antes de implementar ",
+        "Utilizar mais de um LLM para a construção de funcionalidades complexas "
       ],
       "improvementAreas": [
-        ""
+        "Quando começar a alucinar jogar tudo fora e começar do zero",
+        "Estabelecer objetivos mais especificos e menores "
       ],
       "tips": [
-        ""
+        "Passar o objetivo principal com muita clareza",
+        "Quebrar no menor objetivo possível para ter uma implementação com mais qualidade"
       ]
     }
   }
