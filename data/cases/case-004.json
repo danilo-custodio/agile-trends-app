@@ -9,7 +9,7 @@
   "color": "bg-purple-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-02-05T13:45:00Z",
-  "updatedAt": "2025-04-09T02:31:10.913Z",
+  "updatedAt": "2025-04-09T02:32:28.719Z",
   "version": 3,
   "highlights": [
     "Documentação completa gerada em 2 horas (vs. 2 dias)",
@@ -26,7 +26,7 @@
       "description": "Este case demonstra como utilizamos LLMs para automatizar a criação de documentação técnica e de usuário a partir do código-fonte existente. Combinando análise de código, comentários e estrutura da API, conseguimos gerar documentação detalhada, consistente e de alta qualidade em uma fração do tempo anteriormente necessário."
     },
     "video": {
-      "url": "videos/case-004-demo.mp4",
+      "url": "https://youtu.be/TMZ_t81PrbQ",
       "thumbnail": "thumbnails/case-004-video.jpg",
       "highlights": [
         "Demonstração do processo de geração de documentação",
