@@ -2,58 +2,81 @@
   "id": "case-012",
   "title": "Reinforcement Learning Agent",
   "category": "Agente Funcional",
-  "description": "Reinforcement Learning Agent",
-  "timeReduction": "10%",
-  "qualityImprovement": "10%",
+  "description": "Sistemas multiagentes onde usuário fornece um feedback e na próxima solicitação a resposta será dada levando em consideração aquele feedback dado. ",
+  "timeReduction": "90%",
+  "qualityImprovement": "50%",
   "iconName": "Lightbulb",
-  "color": "bg-blue-100",
+  "color": "bg-gray-100",
   "author": "Danilo Custódio",
-  "summary": "Reinforcement Learning Agent",
-  "promptExample": "",
-  "result": "",
+  "summary": "Sistemas multiagentes onde usuário fornece um feedback e na próxima solicitação a resposta será dada levando em consideração aquele feedback dado. ",
+  "promptExample": "Tenho algumas duvidas, o advisor pode ter varios agentes e cada agente varias tarefas, como saber em que tarefa mexer? Apenas me diga , não precisa implementar nada.",
+  "result": "Sistema multiagentes que evolui a execucação de acordo com feedbacks em tempo real",
   "videoLength": "",
   "videoViews": "",
   "productName": "Reinforcement Learning Agent",
   "createdAt": "2025-04-09T03:14:21.446Z",
-  "updatedAt": "2025-04-09T04:08:59.815Z",
+  "updatedAt": "2025-04-09T14:10:36.640Z",
   "version": 1,
   "highlights": [
-    ""
+    "Melhoria continua e incremental",
+    "Aprendizado por reforço ",
+    "Hiper-personalização do sistema"
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Sistemas multiagentes onde usuário fornece um feedback e na próxima solicitação a resposta será dada levando em consideração aquele feedback dado. "
     },
     "video": {
-      "url": "https://www.youtube.com/watch?v=zMF_kTasmUM",
+      "url": "https://youtu.be/zMF_kTasmUM",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Saidas diferentes de acordo com o feedback",
+        "Saídas diferentes para usuários diferentes "
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Ferramenta online",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Hiper-personalização",
+          "type": "blue-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Entender o feedback",
+        "Incoporar na execução ",
+        "Criar um novo contexto para o LLM",
+        "Aplicar sobre a resposta padrão "
       ]
     },
     "results": {
       "before": [
-        ""
+        "Reposta iguais para todos os usuário",
+        "Padrão fixo de resposta",
+        "Necessidade de programaçào para melhorar a resposta"
       ],
       "after": [
-        ""
+        "Resposta específicas por usuário",
+        "Resposta maleáveis de acordo com preferências pessoais",
+        "Sem necessidade de programação "
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Testar simulações de contextos complexos",
+        "Estabelecer limite claros de prompts "
       ],
       "improvementAreas": [
-        ""
+        "Incorporação de feedbacks pouco claros ",
+        "Interpretação do objetivo do usuário com aquele feedback"
       ],
       "tips": [
-        ""
+        "Desafie a IA para te dar soluções alternativas a conceitos definidos"
       ]
     }
   }
