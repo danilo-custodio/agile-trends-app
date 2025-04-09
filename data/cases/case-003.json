@@ -1,6 +1,6 @@
 {
   "id": "case-003",
-  "title": "MVP - Java Fix Crew",
+  "title": "Java Fix Crew",
   "category": "Desenvolvimento",
   "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software. O objetivo é a partir de uma erro de codigo, corrigir o erro e ensinar o desenvolvedor. ",
   "timeReduction": "90%",
@@ -9,7 +9,7 @@
   "color": "bg-yellow-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-25T11:30:00Z",
-  "updatedAt": "2025-04-09T02:28:26.812Z",
+  "updatedAt": "2025-04-09T14:30:06.338Z",
   "version": 1,
   "highlights": [
     "Utilizaçao de um orquestrador de agentes - Crew AI",
@@ -20,7 +20,7 @@
   "result": "Como estruturar melhor a saida de código do LLM",
   "tabs": {
     "overview": {
-      "description": "Este case demonstra como utilizamos LLMs para analisar e otimizar a performance de uma aplicação React com problemas de lentidão. Através de análise de código profunda, foram identificados diversos problemas de renderização, carregamento e gestão de estado que impactavam negativamente a experiência do usuário."
+      "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software. O objetivo é a partir de uma erro de codigo, corrigir o erro e ensinar o desenvolvedor. "
     },
     "video": {
       "url": "https://youtu.be/0LyjOKbierc",
@@ -28,8 +28,7 @@
       "highlights": [
         "Comparação do antes e depois da otimização",
         "Demonstração visual da melhoria de velocidade",
-        "Explicação das técnicas de otimização aplicadas",
-        "Análise das métricas de performance"
+        "Explicação das técnicas de otimização aplicadas"
       ],
       "resources": [
         {
@@ -51,25 +50,21 @@
     },
     "process": {
       "steps": [
-        "Coleta de métricas de performance inicial (Lighthouse, React Profiler)",
         "Análise do código fonte da aplicação pelo LLM",
         "Identificação de padrões problemáticos e gargalos",
-        "Implementação das otimizações sugeridas",
-        "Monitoramento e validação das melhorias"
+        "Implementação das otimizações sugeridas"
       ]
     },
     "results": {
       "before": [
-        "Tempo de carregamento inicial de 4.5 segundos",
-        "Renderizações desnecessárias em componentes aninhados",
-        "Bundles JavaScript de grande tamanho",
-        "Pontuação Lighthouse de performance em 45/100"
+        "Alto tempo para encontrar e corrigir erros ",
+        "Dificuldade de entendimento de causas raiz",
+        "Falta de testes para que os erros não se repitam"
       ],
       "after": [
-        "Tempo de carregamento reduzido para 1.2 segundos",
-        "Componentes otimizados com React.memo e useCallback",
-        "Implementação de code-splitting e lazy loading",
-        "Pontuação Lighthouse de performance em 92/100"
+        "Maior rapidez na identificação dos erros ",
+        "Aprendizado baseado na análise do agente",
+        "Criação de testes unitários"
       ]
     },
     "lessons": {
