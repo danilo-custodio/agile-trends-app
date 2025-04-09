@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T14:25:07.940Z",
+  "lastUpdated": "2025-04-09T14:30:07.465Z",
   "cases": [
     {
       "id": "case-001",
@@ -28,7 +28,7 @@
     },
     {
       "id": "case-003",
-      "title": "MVP - Java Fix Crew",
+      "title": "Java Fix Crew",
       "category": "Desenvolvimento",
       "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software. O objetivo é a partir de uma erro de codigo, corrigir o erro e ensinar o desenvolvedor. ",
       "timeReduction": "90%",
@@ -36,7 +36,7 @@
       "iconName": "Zap",
       "color": "bg-yellow-100",
       "summary": "Como a IA pode ajudar a criar agentes para apoiar o desenvolvimento de software.",
-      "updatedAt": "2025-04-09T02:28:26.812Z"
+      "updatedAt": "2025-04-09T14:30:06.338Z"
     },
     {
       "id": "case-004",
