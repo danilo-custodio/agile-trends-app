@@ -6,7 +6,7 @@
   "timeReduction": "70%",
   "qualityImprovement": "80%",
   "iconName": "Users",
-  "color": "bg-yellow-100",
+  "color": "bg-blue-100",
   "author": "Danilo Custódio",
   "summary": "Criação de um sistema multiagentes para orientações para dar feedbacks para liderados. ",
   "promptExample": "Esse sistema multiagente foi criado dentro da plataforma através das funcionalidades no code.",
@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "Feedback Helper",
   "createdAt": "2025-04-06T15:19:41.058Z",
-  "updatedAt": "2025-04-09T12:33:26.449Z",
+  "updatedAt": "2025-04-09T13:38:08.804Z",
   "version": 1,
   "highlights": [
     "Sistema multiagentes criado utilizando a ferramenta no-code da plataforma",
