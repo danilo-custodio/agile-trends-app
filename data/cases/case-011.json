@@ -1,0 +1,60 @@
+{
+  "id": "case-011",
+  "title": "Dinamic Statistics",
+  "category": "Agente Funcional",
+  "description": "Dinamic Statistics",
+  "timeReduction": "10%",
+  "qualityImprovement": "10%",
+  "iconName": "Lightbulb",
+  "color": "bg-blue-100",
+  "author": "Danilo Custódio ",
+  "summary": "Dinamic Statistics",
+  "promptExample": "",
+  "result": "",
+  "videoLength": "",
+  "videoViews": "",
+  "productName": "Dinamic Statistics",
+  "createdAt": "2025-04-09T03:12:50.621Z",
+  "updatedAt": "2025-04-09T03:12:50.621Z",
+  "version": 1,
+  "highlights": [
+    ""
+  ],
+  "tabs": {
+    "overview": {
+      "description": ""
+    },
+    "video": {
+      "url": "",
+      "thumbnail": "",
+      "highlights": [
+        ""
+      ],
+      "resources": []
+    },
+    "process": {
+      "steps": [
+        ""
+      ]
+    },
+    "results": {
+      "before": [
+        ""
+      ],
+      "after": [
+        ""
+      ]
+    },
+    "lessons": {
+      "whatWorked": [
+        ""
+      ],
+      "improvementAreas": [
+        ""
+      ],
+      "tips": [
+        ""
+      ]
+    }
+  }
+}
