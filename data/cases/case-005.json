@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "OKR Builder",
   "createdAt": "2025-03-16T19:17:27.282Z",
-  "updatedAt": "2025-04-09T12:04:09.293Z",
+  "updatedAt": "2025-04-09T12:15:23.623Z",
   "version": 1,
   "highlights": [
     "Sistema multiagentes criado utilizando a ferramenta no-code da plataforma",
@@ -25,38 +25,65 @@
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Um sistema multiagentes que a partir de uma necessidade estratégica do usuário sugere os OKRs de forma estruturada e completa seguindo as melhores práticas de construção de OKRs. São sugeridos de 3 a 5 objetivos e para cada objetivo de 3 a 5 KRs."
     },
     "video": {
       "url": "https://youtu.be/d6q6H0WVx_E",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Entrada simples e funcional",
+        "Saída padronizada ",
+        "Tempo para construção dos OKRs"
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Template de saida",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "Ferramenta online",
+          "type": "purple-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Entendimento da necessidades estratégicas",
+        "Identificação dos objetivos que atendem às necessidades",
+        "Criação de KRs mensuráveis para cada objetivo ",
+        "Estruturação em uma saída determinada"
       ]
     },
     "results": {
       "before": [
-        ""
+        "Pesquisas extensas para criar os objetivos",
+        "KRs que mais pareciam tarefas ",
+        "Falta de padronização"
       ],
       "after": [
-        ""
+        "Entendimento de objetivos analisando benchmarks",
+        "KRs SMART",
+        "Saida padronizada e estruturada ",
+        "Maior velocidade ",
+        "Mais tempo de discussoes de qualidade para aprovação"
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Determinar com clareza cada uma das especialidades necessárias para construir o sistema multiagente",
+        "Especificar muito detalhamente a saida esperada",
+        "Passar um contexto estratégico completo e amplo "
       ],
       "improvementAreas": [
-        ""
+        "Retirar plano de ação ",
+        "Tempo para atingimento dos KRs mais adequados",
+        "Criar um agente especialista em fazer benchmarks mais profundos utilizando deep search"
       ],
       "tips": [
-        ""
+        "Pedir para a IA sugerir quais os especialistas para o sistema multiagentes",
+        "Passar um contexto muito detalhado "
       ]
     }
   }
