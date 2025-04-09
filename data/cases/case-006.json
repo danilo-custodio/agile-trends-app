@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "Feedback Helper",
   "createdAt": "2025-04-06T15:19:41.058Z",
-  "updatedAt": "2025-04-09T12:23:17.882Z",
+  "updatedAt": "2025-04-09T12:33:26.449Z",
   "version": 1,
   "highlights": [
     "Sistema multiagentes criado utilizando a ferramenta no-code da plataforma",
@@ -35,30 +35,50 @@
         "Parecer de feedback completo e detalhado",
         "Tempo para a gerac"
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Ferramenta online",
+          "type": "blue-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Entendimento do contexto de trabalho do colaborador",
+        "Identificação de objetivos atingidos  e não atingidos",
+        "Identificação de atitudes positivas e negativas",
+        "Sugestão de reforço positivo",
+        "Sugestão de pontos de melhoria",
+        "Sugestão de plano de ação "
       ]
     },
     "results": {
       "before": [
-        ""
+        "Feedback pouco estruturado",
+        "Foco no que está mais próximo do momento",
+        "Dificuldade em ponderar entre pontos positivos e negativos"
       ],
       "after": [
-        ""
+        "Feedback estruturado ",
+        "Equilibrio entre pontos positivos e negativos ",
+        "Orientações a fim de motivas e engajar "
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Determinar com clareza cada uma das especialidades necessárias para construir o sistema multiagente",
+        "Colocar o objetivo final que se quer alcançar em termos qualitativos",
+        "Passar um contexto de atuação amplo e completo"
       ],
       "improvementAreas": [
-        ""
+        "Layout de saída",
+        "Maior foco , as vezes o sistema multi agentes retorna muitas sugestões ",
+        "Criar um agente revisor"
       ],
       "tips": [
-        ""
+        "Pedir para a IA ser o mais simples possível para aquele objetivo ",
+        "Passar um contexto bem detalhado "
       ]
     }
   }
