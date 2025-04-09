@@ -6,7 +6,7 @@
   "timeReduction": "95%",
   "qualityImprovement": "30%",
   "iconName": "Lightbulb",
-  "color": "bg-blue-100",
+  "color": "bg-green-100",
   "author": "Danilo Custódio",
   "summary": "a partir de zip com código java sejam construídos testes unitários para todas as classes e métodos. ",
   "promptExample": "Funcionou, agora, que pegar essas analises e utilizar como imput para gerar efetivamente as classes de teste. Quando vc sugeriu , vc sugeriu em um outra rota, mas pra mim faz sentido ter uma rota que primeiro utiliza o agente de analise e depoi utiliza o agente de geracao e depois o agente de integração. Como você vê isso, vamos discutir antes de iniciar as implementações.",
@@ -15,7 +15,7 @@
   "videoViews": "",
   "productName": "Java Unit Test Generator",
   "createdAt": "2025-04-09T03:05:04.869Z",
-  "updatedAt": "2025-04-09T12:53:08.290Z",
+  "updatedAt": "2025-04-09T13:19:17.688Z",
   "version": 1,
   "highlights": [
     "Processamento assíncrono ",
@@ -28,7 +28,7 @@
       "description": "Gerar testes unitários em java a partir de um Zip. O sistema identifica as tecnolgias do projeto e gera os testes unitários para essa tecnolgia. Entende e mapeia a estrtura para passar como contexto e gerar testes com uma melhor qualidade. "
     },
     "video": {
-      "url": "https://www.youtube.com/watch?v=Ln99ojdxjXg",
+      "url": "https://youtu.be/Ln99ojdxjXg",
       "thumbnail": "",
       "highlights": [
         "Interface de entrada específica",
