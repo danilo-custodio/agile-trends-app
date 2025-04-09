@@ -9,7 +9,7 @@
   "color": "bg-yellow-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-25T11:30:00Z",
-  "updatedAt": "2025-04-06T15:06:41.214Z",
+  "updatedAt": "2025-04-09T02:28:26.812Z",
   "version": 1,
   "highlights": [
     "Utilizaçao de um orquestrador de agentes - Crew AI",
@@ -23,7 +23,7 @@
       "description": "Este case demonstra como utilizamos LLMs para analisar e otimizar a performance de uma aplicação React com problemas de lentidão. Através de análise de código profunda, foram identificados diversos problemas de renderização, carregamento e gestão de estado que impactavam negativamente a experiência do usuário."
     },
     "video": {
-      "url": "videos/case-003-demo.mp4",
+      "url": "https://youtu.be/0LyjOKbierc",
       "thumbnail": "thumbnails/case-003-video.jpg",
       "highlights": [
         "Comparação do antes e depois da otimização",
