@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T12:53:09.435Z",
+  "lastUpdated": "2025-04-09T13:17:22.909Z",
   "cases": [
     {
       "id": "case-001",
@@ -90,13 +90,13 @@
       "id": "case-010",
       "title": "Search Agent",
       "category": "Agente Funcional",
-      "description": "Search Agent",
+      "description": "O objetivo é não ter que programar essa funcionalidade, mas sim que ela seja executada por um agente integrado. A funcionalidade é uma busca de sistemas multiagentes baseado em objetivos do usuário.",
       "timeReduction": "10%",
       "qualityImprovement": "10%",
       "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Search Agent",
-      "updatedAt": "2025-04-09T03:10:13.022Z"
+      "color": "bg-green-100",
+      "summary": "A funcionalidade é uma busca de sistemas multiagentes baseado em objetivos do usuário.",
+      "updatedAt": "2025-04-09T13:17:21.709Z"
     },
     {
       "id": "case-011",
