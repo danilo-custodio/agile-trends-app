@@ -1,8 +1,8 @@
 {
   "id": "case-005",
-  "title": "User History Builder",
-  "category": "Requisitos",
-  "description": "Teste 1",
+  "title": "OKR Builder",
+  "category": "Estratégia",
+  "description": "Case da criação de um sistema multiagentes para criação de OKRs. ",
   "timeReduction": "11%",
   "qualityImprovement": "11%",
   "iconName": "Lightbulb",
@@ -13,9 +13,9 @@
   "result": "Teste 1",
   "videoLength": "",
   "videoViews": "",
-  "productName": "Teste 1",
+  "productName": "OKR Builder",
   "createdAt": "2025-03-16T19:17:27.282Z",
-  "updatedAt": "2025-04-06T15:16:22.418Z",
+  "updatedAt": "2025-04-09T02:50:00.283Z",
   "version": 1,
   "highlights": [
     ""
