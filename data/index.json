@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:00:52.718Z",
+  "lastUpdated": "2025-04-09T03:03:22.918Z",
   "cases": [
     {
       "id": "case-001",
@@ -88,15 +88,15 @@
     },
     {
       "id": "case-008",
-      "title": "Java Unit Test Generator",
-      "category": "Teste",
-      "description": "Java Unit Test Generator",
+      "title": "Java Fix Crew",
+      "category": "Desenvolvimento",
+      "description": "Java Fix Crew",
       "timeReduction": "10%",
       "qualityImprovement": "10%",
       "iconName": "Lightbulb",
       "color": "bg-blue-100",
-      "summary": "Java Unit Test Generator",
-      "updatedAt": "2025-04-09T02:59:09.683Z"
+      "summary": "Java Fix Crew",
+      "updatedAt": "2025-04-09T03:03:22.323Z"
     }
   ]
 }
