@@ -2,58 +2,81 @@
   "id": "case-010",
   "title": "Search Agent",
   "category": "Agente Funcional",
-  "description": "Search Agent",
+  "description": "O objetivo é não ter que programar essa funcionalidade, mas sim que ela seja executada por um agente integrado. A funcionalidade é uma busca de sistemas multiagentes baseado em objetivos do usuário.",
   "timeReduction": "10%",
   "qualityImprovement": "10%",
   "iconName": "Lightbulb",
-  "color": "bg-blue-100",
+  "color": "bg-green-100",
   "author": "Danilo Custódio",
-  "summary": "Search Agent",
+  "summary": "A funcionalidade é uma busca de sistemas multiagentes baseado em objetivos do usuário.",
   "promptExample": "",
   "result": "",
   "videoLength": "",
   "videoViews": "",
   "productName": "Search Agent",
   "createdAt": "2025-04-09T03:10:13.022Z",
-  "updatedAt": "2025-04-09T03:10:13.022Z",
+  "updatedAt": "2025-04-09T13:17:21.709Z",
   "version": 1,
   "highlights": [
-    ""
+    "Busca feita por um agente de IA",
+    "Agente de IA integrado as funcionalidades do sistema",
+    "Ótima experiência do usuário "
   ],
   "tabs": {
     "overview": {
-      "description": ""
+      "description": "Esse agente recebe um objetivo do usuário em relação a utilização da plataforma, e baseado nesse objetivo que é uma frase ele encontra os sistemas multiagentes que melhor atendem aquele objetivo. "
     },
     "video": {
-      "url": "",
+      "url": "https://youtu.be/cY5-ElcXq9U",
       "thumbnail": "",
       "highlights": [
-        ""
+        "Inserção do objetivo pelo usuário",
+        "Agentes que se relacionam com aquele objetivo "
       ],
-      "resources": []
+      "resources": [
+        {
+          "name": "Ferramenta online",
+          "type": "blue-tag",
+          "url": "#"
+        },
+        {
+          "name": "LLM conectado em tempo real",
+          "type": "red-tag",
+          "url": "#"
+        }
+      ]
     },
     "process": {
       "steps": [
-        ""
+        "Mapear todos os agentes",
+        "Repassar o contexto dos sistemas multiagentes para a IA",
+        "A IA encontra os sistemas multiagentes mais aderentes ao objetivo ",
+        "Os sistemas multiagentes são apresentados ao usuário"
       ]
     },
     "results": {
       "before": [
-        ""
+        "Pesquisa por nome ",
+        "Pesquisa por categoria ",
+        "Programação em SLQ "
       ],
       "after": [
-        ""
+        "O usuário diz o seu objetivo e é retornado uma lista de sistemas multiagentes mais aderentes ",
+        "Funcionalidade realizada por um sistema multiagentes "
       ]
     },
     "lessons": {
       "whatWorked": [
-        ""
+        "Criar uma representação dos dados adequada para o LLM ",
+        "Passar o objetivo de forma clara "
       ],
       "improvementAreas": [
-        ""
+        "Ampliar a base de objetivos dos sistemas multiagentes ",
+        "Solução caso o LLM não esteja respondendo "
       ],
       "tips": [
-        ""
+        "Peça ao LLM para criar a melhor base que ele consegue interpretar ",
+        "Comece com bases menores e depois vá expandindo "
       ]
     }
   }
