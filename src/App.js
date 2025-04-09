@@ -27,6 +27,8 @@ const CasesApp = () => {
   const [offlineMode, setOfflineMode] = useState(!navigator.onLine);
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [showVideoModal, setShowVideoModal] = useState(false);
+
+  console.log('Deployed Version: 1.0.0 - Timestamp: ' + new Date().toISOString());
   
 
   // Verificar status de conexão
