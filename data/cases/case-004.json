@@ -9,44 +9,41 @@
   "color": "bg-purple-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-02-05T13:45:00Z",
-  "updatedAt": "2025-04-09T02:32:28.719Z",
+  "updatedAt": "2025-04-09T14:39:22.838Z",
   "version": 3,
   "highlights": [
-    "Documentação completa gerada em 2 horas (vs. 2 dias)",
-    "Consistência de 95% entre código e documentação",
-    "Feedback positivo dos usuários sobre clareza"
+    "Criação da versão 1 em 60 horas",
+    "Capacidades No Code",
+    "19 funcionalidades completas"
   ],
   "promptExample": "Tenho algumas duvidas, o advisor pode ter varios agentes e cada agente varias tarefas, como saber em que tarefa mexer? Apenas me diga , não precisa implementar nada.",
   "result": "Aprendi primeiro a discutir com a IA a implementação antes de pedir pra ela implementar. É importante ser claro e falar que você não quer a implementação senão a tendencia é a IA inciiar a geração de código o quanto antes. ",
-  "videoLength": "8:15",
-  "videoViews": "426",
+  "videoLength": "",
+  "videoViews": "",
   "productName": "AI Advisory Sync",
   "tabs": {
     "overview": {
-      "description": "Este case demonstra como utilizamos LLMs para automatizar a criação de documentação técnica e de usuário a partir do código-fonte existente. Combinando análise de código, comentários e estrutura da API, conseguimos gerar documentação detalhada, consistente e de alta qualidade em uma fração do tempo anteriormente necessário."
+      "description": "Um experimento para entender como a IA pode ajudar a criar agentes. O objetivo é criar uma plataforma No-code para criação de agentes de IA."
     },
     "video": {
-      "url": "https://youtu.be/TMZ_t81PrbQ",
-      "thumbnail": "thumbnails/case-004-video.jpg",
+      "url": "",
+      "thumbnail": "",
       "highlights": [
-        "Demonstração do processo de geração de documentação",
-        "Comparação com a documentação manual anterior",
-        "Estrutura e organização da documentação gerada",
-        "Feedback dos desenvolvedores e usuários finais"
+        "Demonstração da plataforma ",
+        "Usuário comum e administrador",
+        "Agentes disponíveis ",
+        "Histórico de execuções ",
+        "Criação de projetos ",
+        "Agentes favoritos"
       ],
       "resources": [
-        {
-          "name": "Template de documentação",
-          "type": "blue-tag",
-          "url": "#"
-        },
         {
           "name": "Ferramenta online",
           "type": "green-tag",
           "url": "#"
         },
         {
-          "name": "Guia de comentários",
+          "name": "Plataforma No-code",
           "type": "purple-tag",
           "url": "#"
         }
@@ -54,25 +51,23 @@
     },
     "process": {
       "steps": [
-        "Análise inicial do código-fonte e comentários existentes",
-        "Criação de um prompt personalizado com estrutura de documentação desejada",
-        "Geração da documentação técnica para desenvolvedores",
-        "Geração da documentação de usuário em linguagem mais acessível",
-        "Revisão humana e ajustes finais"
+        "Definição de objetivos claros ",
+        "Criação das funcionalidades de maneira incremental",
+        "Adição de fases de construção "
       ]
     },
     "results": {
       "before": [
-        "Documentação manual que consumia dias de trabalho",
-        "Inconsistências frequentes entre código e documentação",
-        "Documentação desatualizada após mudanças no código",
-        "Linguagem técnica inacessível para usuários finais"
+        "Agentes isolados ",
+        "Sem gravação de histórico",
+        "Sem autenticação ",
+        "Sem perfis disntintos"
       ],
       "after": [
-        "Documentação gerada automaticamente em horas",
-        "Alta consistência entre código e documentação",
-        "Processo simples de atualização após mudanças",
-        "Linguagem adaptada para diferentes públicos"
+        "Agentes integrados",
+        "Capacidade no-code",
+        "Autenticação oauth 2.0",
+        "Perfis de admin e usuário "
       ]
     },
     "lessons": {
@@ -90,9 +85,7 @@
       "tips": [
         "Invista em comentários descritivos e estruturados no código-fonte",
         "Defina claramente a estrutura da documentação desejada",
-        "Forneça exemplos do estilo de escrita preferido",
-        "Mantenha um glossário de termos técnicos e suas explicações simples",
-        "Segmente a documentação para diferentes níveis de experiência técnica"
+        "Forneça exemplos do estilo de escrita preferido"
       ]
     }
   },
