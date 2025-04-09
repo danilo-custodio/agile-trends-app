@@ -1,36 +1,39 @@
 // service-worker.js
 const CACHE_NAME = 'cases-llm-v2';
-const BASE_URL = self.location.pathname.replace('service-worker.js', '');
+const BASE_PATH = self.location.pathname.replace('service-worker.js', '');
+
 const APP_SHELL = [
-  '/',
-  '/index.html',
-  '/static/js/main.chunk.js',
-  '/static/css/main.chunk.css',
-  '/manifest.json',
-  '/logo192.png',
-  '/logo512.png',
-  '/offline.html',
-  '/data/index.json'
+  `${BASE_PATH}index.html`,
+  `${BASE_PATH}static/js/main.chunk.js`,
+  `${BASE_PATH}static/css/main.chunk.css`,
+  `${BASE_PATH}manifest.json`,
+  `${BASE_PATH}logo192.png`,
+  `${BASE_PATH}logo512.png`,
+  `${BASE_PATH}offline.html`,
+  `${BASE_PATH}data/index.json`
 ];
 
-// Instalação do service worker e cache de recursos
 self.addEventListener('install', event => {
   console.log('Service Worker: Instalando...');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: Cacheando app shell');
+        console.log('Recursos a cachear:', APP_SHELL);
         
-        // Tentar adicionar recursos individualmente
+        // Tentar adicionar recursos individualmente com fetch explícito
         return Promise.all(
           APP_SHELL.map(async (url) => {
             try {
-              await cache.add(url);
-              console.log(`Cached successfully: ${url}`);
+              const response = await fetch(url);
+              if (response.ok) {
+                await cache.put(url, response);
+                console.log(`Cached successfully: ${url}`);
+              } else {
+                console.warn(`Não foi possível cachear: ${url}`);
+              }
             } catch (error) {
-              console.error(`Failed to cache: ${url}`, error);
-              // Opcional: pode ignorar recursos que falham
-              // return null;
+              console.error(`Erro ao cachear ${url}:`, error);
             }
           })
         );
