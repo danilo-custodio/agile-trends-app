@@ -20,9 +20,25 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: Cacheando app shell');
-        return cache.addAll(APP_SHELL);
+        
+        // Tentar adicionar recursos individualmente
+        return Promise.all(
+          APP_SHELL.map(async (url) => {
+            try {
+              await cache.add(url);
+              console.log(`Cached successfully: ${url}`);
+            } catch (error) {
+              console.error(`Failed to cache: ${url}`, error);
+              // Opcional: pode ignorar recursos que falham
+              // return null;
+            }
+          })
+        );
       })
       .then(() => self.skipWaiting())
+      .catch(error => {
+        console.error('Erro crítico na instalação do Service Worker:', error);
+      })
   );
 });
 
