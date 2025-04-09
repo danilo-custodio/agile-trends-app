@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-04-09T03:24:39.962Z",
+  "lastUpdated": "2025-04-09T03:26:11.769Z",
   "cases": [
     {
       "id": "case-001",
@@ -73,18 +73,6 @@
       "color": "bg-blue-100",
       "summary": "Teste",
       "updatedAt": "2025-04-09T02:52:14.637Z"
-    },
-    {
-      "id": "case-008",
-      "title": "Java Fix Crew",
-      "category": "Desenvolvimento",
-      "description": "Java Fix Crew",
-      "timeReduction": "10%",
-      "qualityImprovement": "10%",
-      "iconName": "Lightbulb",
-      "color": "bg-blue-100",
-      "summary": "Java Fix Crew",
-      "updatedAt": "2025-04-09T03:03:22.323Z"
     },
     {
       "id": "case-009",
