@@ -1,26 +1,26 @@
 {
   "id": "case-001",
-  "title": "MVP - User History Builder",
+  "title": "User History Builder",
   "category": "Requisitos",
-  "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software. O objetivo é a partir de uma entrevista com um cliente gerar uma HU.",
+  "description": "Criação de um sistema multiagentes que a partir de da transcrição de uma  entrevista gera uma história de usuário",
   "timeReduction": "95%",
   "qualityImprovement": "50%",
   "iconName": "Lightbulb",
   "color": "bg-blue-100",
   "author": "Danilo Custódio",
   "createdAt": "2025-01-15T10:30:00Z",
-  "updatedAt": "2025-04-08T21:10:03.176Z",
+  "updatedAt": "2025-04-09T14:16:52.512Z",
   "version": 1,
   "highlights": [
-    "Eliminação de 8 reuniões de refinamento",
-    "Identificação de 12 casos de borda não considerados",
-    "Redução de retrabalho em 65%"
+    "Diminuição do tempo de aprovação de história",
+    "Padrão de escrita claro e e de acordo com as melhores práticas ",
+    "Satisfação do cliente aumentada"
   ],
   "promptExample": "Melhore meu template de historia de usuario para o melhor que conseguir",
   "result": "Uma saida deterministica em termos de template para a histórias de usuário.",
   "videoLength": "",
   "videoViews": "",
-  "productName": "MVP - History Builder",
+  "productName": "User History Builder",
   "tabs": {
     "overview": {
       "description": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software. \n\nO objetivo é a partir de uma entrevista com um cliente gerar uma HU e que essa HU possa ser validada pelo cliente na própria entrevista dimuindo consideravelmente o tempo de aprovação dos requisitos e consequentemente do inicio da implementação. "
@@ -36,18 +36,13 @@
       ],
       "resources": [
         {
-          "name": "Documentação técnica",
-          "type": "blue-tag",
-          "url": "#"
-        },
-        {
-          "name": "Link para teste",
-          "type": "green-tag",
-          "url": "#"
-        },
-        {
-          "name": "Caso de uso completo",
+          "name": "Caso de uso ",
           "type": "purple-tag",
+          "url": "#"
+        },
+        {
+          "name": "Ferramenta online",
+          "type": "green-tag",
           "url": "#"
         }
       ]
@@ -62,7 +57,7 @@
     "results": {
       "before": [
         "Processo manual demorado",
-        "Erros de implementação e complexidade de codigo",
+        "Erros de implementação",
         "Altos custos de retrabalho"
       ],
       "after": [
@@ -91,5 +86,5 @@
       ]
     }
   },
-  "summary": "Um experimento para entender como a IA pode ajudar a criar agentes para apoiar o ciclo de desenvolvimento de software"
+  "summary": "Criação de um sistema multiagentes que a partir de da transcrição de uma  entrevista gera uma história de usuário"
 }
